@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenapa Harus Python? &#8212; Basic Python Programming</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pengenalan Jupyter Notebook" href="intro-to-notebook.html" />
+    <link rel="prev" title="Welcome" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Basic Python Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Kenapa Harus Python?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro-to-notebook.html">
+   Pengenalan Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-types-and-operators.html">
+   Tipe Data dan Operator
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data-structures/index.html">
+   Struktur Data Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-structures/list.html">
+     List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-structures/tuple.html">
+     Tuple
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-structures/set.html">
+     Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-structures/dictionary.html">
+     Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="control-flow/index.html">
+   Arus Kontrol
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="control-flow/conditional-statement.html">
+     Pernyataan Kondisional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="control-flow/while-loop.html">
+     Perulangan dengan While
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="control-flow/for-loop.html">
+     Perulangan dengan For
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="modularity/index.html">
+   Konsep Modularitas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modularity/functions.html">
+     Fungsi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modularity/class.html">
+     Objek dan Kelas dalam Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modularity/modules.html">
+     Modul dan Paket dalam Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Referensi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   Referensi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python/why-python.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#awal-mula-python">
+   Awal Mula Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perbandingan-dengan-bahasa-pemrograman-lain">
+   Perbandingan dengan Bahasa Pemrograman Lain
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r">
+     R
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tren-penggunaan-python-sekarang-dan-masa-depan">
+   Tren Penggunaan Python Sekarang dan Masa Depan
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="kenapa-harus-python">
+<h1>Kenapa Harus Python?<a class="headerlink" href="#kenapa-harus-python" title="Permalink to this headline">¶</a></h1>
+<p>Sebelum kita mulai belajar Python, kita perlu tahu kenapa kita harus belajar Python. Pada materi ini kita akan mulai dengan sejarah awal adanya Python, tren perkembengan Python sampai sekarang, perbandingan dengan bahasa pemrograman yang lain, kelebihan Python yang berguna dalam data science, dan bagaimana perkembangan Python ke depannya.</p>
+<div class="section" id="awal-mula-python">
+<h2>Awal Mula Python<a class="headerlink" href="#awal-mula-python" title="Permalink to this headline">¶</a></h2>
+<p>Python dikembangkan oleh programmer asal Belanda bernama <a class="reference external" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> di akhir tahun ‘80-an yang kemudian memublikasikan rilis pertama pada tahun 1991. Python dikembangkan sebagai bahasa pemrograman level tinggi (<strong>high-level</strong>) dan bertujuan umum (<strong>general-purpose</strong>).</p>
+<p>Sampai saat ini, versi terakhir Python yang sudah rilis ada versi 3.9.5. Mulai dari tahun 2020, pengembangan dan pemeliharan Python versi 2.x ke bawah (2.7, 2.6, 2.0, 1.8, dan seterusnya) telah dihentikan. Sehingga, sekarang pengguna dan komunitas sangat disarankan menggunakan Python versi 3.x ke atas.</p>
+<blockquote>
+<div><p>Python 2.x masih bisa digunakan, hanya saja pengembangan dan pemeliharaannya tidak dilakukan lagi. (<a class="reference external" href="https://www.python.org/dev/peps/pep-0373/">ref</a>)</p>
+</div></blockquote>
+<p>Di bawah ini visualisasi jadwal rilis beberapa versi Python diambil dari <a class="reference external" href="https://www.geeksforgeeks.org/history-of-python/">geeksforgeeks</a>.</p>
+<p><img alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/20190502023317/TIMELINE.jpg" /></p>
+</div>
+<div class="section" id="perbandingan-dengan-bahasa-pemrograman-lain">
+<h2>Perbandingan dengan Bahasa Pemrograman Lain<a class="headerlink" href="#perbandingan-dengan-bahasa-pemrograman-lain" title="Permalink to this headline">¶</a></h2>
+<p>Selain Python, opsi bahasa pemrograman lain yang juga sering digunakan dalam melakukan data science adalah <a class="reference external" href="https://www.r-project.org/">R</a>. Baik R maupun Python merupakan bahasa pemorgraman yang dapat diakses dan digunakan secara gratis oleh siapa saja. Lalu kenapa kita tidak menggunakan R?</p>
+<p>Kita perlu membandingkan terlebih dahulu, apa kelebihan dan kekurangan dari masing-masing bahasa, baik R ataupun Python. Mari kita lihat.</p>
+<div class="section" id="r">
+<h3>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Ditujukan untuk analisis statistik</p></li>
+<li><p>Dikembangkan oleh statistikawan untuk statistikawan</p></li>
+<li><p>Menyediakan visualisasi yang cantik dan beragam</p></li>
+<li><p>Relatif lebih lambat dibandingkan dengan Python</p></li>
+<li><p>Tidak bisa digunakan sebagai <em>back-end</em> sebuah aplikasi web</p></li>
+</ul>
+</div>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Mudah untuk dipelajari</p></li>
+<li><p>Bisa digunakan untuk berbagai macam tujuan, tidak hanya data science</p></li>
+<li><p>Komunitas pengguna yang sangat aktif dan banyak</p></li>
+<li><p>Visualisasi di Python lebih kompleks</p></li>
+</ul>
+<p>Karena beberapa poin di atas lah, kita memutuskan untuk menggunakan Python. Kita bisa beralih menggunakan R kalau memang proyek data science yang dikerjakan lebih berat dan seringkali berurusan dengan statistika.</p>
+</div>
+</div>
+<div class="section" id="tren-penggunaan-python-sekarang-dan-masa-depan">
+<h2>Tren Penggunaan Python Sekarang dan Masa Depan<a class="headerlink" href="#tren-penggunaan-python-sekarang-dan-masa-depan" title="Permalink to this headline">¶</a></h2>
+<p>Dengan semakin banyaknya yang memakai Python, mulai dari untuk data science, web development, aplikasi permainan, dan lainnya, Python tumbuh dan berkembang menjadi bahasa pemrograman yang sangat populer. Selain itu juga, banyak pengembang yang membuat modul atau pustakanya sendiri untuk bisa dipakai oleh orang lain, sehingga dukungan dari komunitas Python juga besar.</p>
+<p>Survei yang dilakukan oleh <a class="reference external" href="https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages">stackoverflow pada tahun 2020</a> menempatkan Python pada posisi 4 bahasa pemrograman paling populer, yang sebelumnya pada hasil <a class="reference external" href="https://insights.stackoverflow.com/survey/2018#technology">survei 2018</a> berada pada posisi 7. Python berhasil mengalahkan (melangkahi) bahasa pemrogrman yang lain seperti SQL, Java, dan Bash/Shell.</p>
+<p>GitHub juga memublikasikan <a class="reference external" href="https://octoverse.github.com/">data statistik</a> semua kode yang ditulis seluruh pengembang/pengguna GitHub. Terlihat tren peringkat Python dari 6 tahun terakhir mengalami kenaikan. Sampai pada tahun 2020 kemarin, Python sudah menduduki peringkat kedua di bawah javascript dan mengambil alih peringkat yang dimiliki oleh Java di tahun sebelumnya.</p>
+<p><img alt="python-github" src="../_images/top-languages-gh-2020.png" /></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "syahrulhamdani/bitlabs-webinar-2021",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Welcome</a>
+    <a class='right-next' id="next-link" href="intro-to-notebook.html" title="next page">Pengenalan Jupyter Notebook</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Syahrul Hamdani<br/>
+        
+            &copy; Copyright Bitlabs Academy 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

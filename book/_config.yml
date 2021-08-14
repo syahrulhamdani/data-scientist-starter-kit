@@ -1,0 +1,35 @@
+# Book Settings
+title: "Basic Python Programming"
+author: "Syahrul Hamdani"
+copyright: "Bitlabs Academy 2021"
+bibtex_reference_style: author_year  # or label, super, \supercite
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+
+repository:
+  url: https://github.com/syahrulhamdani/bitlabs-webinar-2021
+  branch: main
+  path_to_book: book
+
+# Exeuction Settings
+execute:
+  execute_notebook: "cache"
+  allow_errors: true
+
+launch_buttons:
+    # colab_url: "https://colab.research.google.com"
+  thebe: true
+
+bibtex_bibfiles:
+  - references.bib

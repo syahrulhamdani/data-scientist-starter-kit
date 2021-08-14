@@ -1,0 +1,21 @@
+format: jb-book
+root: index
+parts:
+- caption: Basic Python Programming
+  chapters:
+  - file: python/why-python
+  - file: python/data-types-and-operators
+  - file: python/data-structures/index
+    sections:
+    - file: python/data-structures/list
+    - file: python/data-structures/tuple
+    - file: python/data-structures/set
+    - file: python/data-structures/dictionary
+  - file: python/control-flow/index
+    sections:
+    - file: python/control-flow/conditional-statement
+    - file: python/control-flow/while-loop
+    - file: python/control-flow/for-loop
+- caption: Referensi
+  chapters:
+  - file: references.md

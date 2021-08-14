@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set &#8212; Basic Python Programming</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Dictionary" href="dictionary.html" />
+    <link rel="prev" title="Tuple" href="tuple.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Basic Python Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Pengenalan Pemrograman Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../why-python.html">
+   Kenapa Harus Python?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro-to-notebook.html">
+   Pengenalan Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-types-and-operators.html">
+   Tipe Data dan Operator
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Struktur Data Python
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="list.html">
+     List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuple.html">
+     Tuple
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionary.html">
+     Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../control-flow/index.html">
+   Arus Kontrol
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../control-flow/conditional-statement.html">
+     Pernyataan Kondisional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../control-flow/while-loop.html">
+     Perulangan dengan While
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../control-flow/for-loop.html">
+     Perulangan dengan For
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../modularity/index.html">
+   Konsep Modularitas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modularity/functions.html">
+     Fungsi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modularity/class.html">
+     Objek dan Kelas dalam Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modularity/modules.html">
+     Modul dan Paket dalam Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Referensi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../references.html">
+   Referensi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/engineering/python/data-structures/set.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/syahrulhamdani/bitlabs-webinar-2021/main?urlpath=tree/book/engineering/python/data-structures/set.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mendefinisikan-set-dengan">
+   Mendefinisikan Set dengan
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     {}
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mendefinisikan-set-dengan-fungsi-set">
+   Mendefinisikan Set dengan Fungsi
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     set()
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="set">
+<h1>Set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h1>
+<p>Set adalah sebuah struktur data dalam Python yang <strong>tidak terurut</strong> (<em>unordered</em>), <em>immutable</em>, dan setiap elemennya unik. Oleh karena setiap elemen dalam <code class="docutils literal notranslate"><span class="pre">set</span></code> adalah unik, maka tidak ada duplikat di dalamny, meskipun kita “dengan sengaja” mendefinisikan <code class="docutils literal notranslate"><span class="pre">set</span></code> dengan nilai duplikat.</p>
+<div class="section" id="mendefinisikan-set-dengan">
+<h2>Mendefinisikan Set dengan <code class="docutils literal notranslate"><span class="pre">{}</span></code><a class="headerlink" href="#mendefinisikan-set-dengan" title="Permalink to this headline">¶</a></h2>
+<p>Cara pertama untuk mendefinisikan <code class="docutils literal notranslate"><span class="pre">set</span></code> adalah dengan mendaftarkan objek-objek yang memiliki nilai <em>hash</em> di dalam <code class="docutils literal notranslate"><span class="pre">{}</span></code> dan setiap elemennya dipisahkan dengan <code class="docutils literal notranslate"><span class="pre">,</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Nilai hash adalah nilai atau kode hasil dari enkripsi (fungsi) yang nilainya tidak akan berubah selamanya. Nilai hash, pada bidang ilmu komputer, digunakan untuk mengakses suatu data, yang memakan banyak memori, dengan efisien.</p>
+<p>Semua objek <em>immutable</em> dalam Python, yaitu angka, string, dan tuple, memiliki nilai <em>hash</em> yang berarti <em>hashable</em>. Sehingga, objek-objek tersebut bisa kita masukkan dalam <code class="docutils literal notranslate"><span class="pre">set</span></code> dan <strong>objek selain itu tidak bisa</strong> <span id="id1">[<a class="reference internal" href="../../../references.html#id2">Fou21d</a>]</span>.</p>
+</div>
+<p>Perhatikan contoh kode dan luarannya di bawah ini.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">set_is_unique</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>  <span class="c1"># akan menghasilkan {1, 2, 3, 4, 5}</span>
+<span class="n">string_in_set</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Michael&quot;</span><span class="p">,</span> <span class="s2">&quot;Kevin&quot;</span><span class="p">,</span> <span class="s2">&quot;Stuart&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Stuart&quot;</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">set_is_unique</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">set_is_unique</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string_in_set</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">string_in_set</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 5} &lt;class &#39;set&#39;&gt;
+{&#39;Michael&#39;, &#39;Bob&#39;, &#39;Kevin&#39;, &#39;Stuart&#39;} &lt;class &#39;set&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tipe data <code class="docutils literal notranslate"><span class="pre">set</span></code> merepresentasikan arti sebenarnya, yaitu <strong>himpunan</strong>. Di matematika, kita mengenal ciri-ciri himpunan dan juga operasi yang melibatkan himpunan, seperti irisan, gabungan, dan lainnya.</p>
+<!-- ![set illustration](../../../assets/images/set-illustration.png) -->
+<div class="figure align-default" id="set-illustration">
+<img alt="../../../_images/set-illustration.png" src="../../../_images/set-illustration.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Ilustrasi dari <span id="id2">[<a class="reference internal" href="../../../references.html#id22">Lub19</a>]</span></span><a class="headerlink" href="#set-illustration" title="Permalink to this image">¶</a></p>
+</div>
+<p>Untuk mendukung operasi tersebut, Python sudah menyediakan beberapa fungsi dan metode bawaan. Silakan baca dokumentasi Python <a class="reference external" href="https://docs.python.org/3.8/library/stdtypes.html#set-types-set-frozenset">ini</a>. Mari kita coba implementasikan beberapa pada kuis berikut.</p>
+<div class="alert alert-block alert-info docutils">
+<p><strong>Kuis:</strong> Menggunakan fungsi dan metode bawaan untuk <code class="docutils literal notranslate"><span class="pre">set</span></code>, jawab/implementasikan soal di bawah ini:</p>
+<ol class="simple">
+<li><p>Definisikan 2 set menurut gambar di atas, dengan nama variabel <code class="docutils literal notranslate"><span class="pre">female_names</span></code> (kiri) dan <code class="docutils literal notranslate"><span class="pre">male_names</span></code> (kanan).</p></li>
+<li><p>Tampilkan 2 variabel tersebut dan jumlah masing-masing elemen.</p></li>
+<li><p>Buat variabel <code class="docutils literal notranslate"><span class="pre">all_names</span></code> yang berisikan semua nama gabungan dari <code class="docutils literal notranslate"><span class="pre">female_names</span></code> dan <code class="docutils literal notranslate"><span class="pre">male_names</span></code>.</p></li>
+<li><p>Buat variabel <code class="docutils literal notranslate"><span class="pre">female_male_names</span></code> yang memuat nama yang bisa termasuk dalam dua himpunan tersebut.</p></li>
+<li><p>Buat variabel <code class="docutils literal notranslate"><span class="pre">only_females</span></code> dan <code class="docutils literal notranslate"><span class="pre">only_males</span></code> yang memuat nama-nama dalam <code class="docutils literal notranslate"><span class="pre">female_names</span></code> yang tidak ada dalam <code class="docutils literal notranslate"><span class="pre">male_names</span></code> dan sebaliknya, secara beruturut-turut.</p></li>
+</ol>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mendefinisikan-set-dengan-fungsi-set">
+<h2>Mendefinisikan Set dengan Fungsi <code class="docutils literal notranslate"><span class="pre">set()</span></code><a class="headerlink" href="#mendefinisikan-set-dengan-fungsi-set" title="Permalink to this headline">¶</a></h2>
+<p>Sama dengan <code class="docutils literal notranslate"><span class="pre">tuple</span></code> dan <code class="docutils literal notranslate"><span class="pre">list</span></code>, untuk mendefinisikan set, Python menyediakan fungsi bawaan <code class="docutils literal notranslate"><span class="pre">set()</span></code> yang bisa digunakan untuk mendefinisikan set kosong (<em>empty set</em>) dan mengonversi objek dengan tipe data lain menjadi set.</p>
+<p>Mari kita coba implementasi kode di bawah ini.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">empty_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">purchased_history</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;batman&quot;</span><span class="p">,</span> <span class="s2">&quot;robin&quot;</span><span class="p">,</span> <span class="s2">&quot;iron man&quot;</span><span class="p">,</span> <span class="s2">&quot;robin&quot;</span><span class="p">,</span> <span class="s2">&quot;captain america&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;iron man&quot;</span><span class="p">,</span> <span class="s2">&quot;iron man&quot;</span><span class="p">,</span> <span class="s2">&quot;superman&quot;</span><span class="p">,</span> <span class="s2">&quot;batman&quot;</span><span class="p">,</span> <span class="s2">&quot;superman&quot;</span><span class="p">]</span>
+<span class="n">unique_purchased</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">purchased_history</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Kita hanya bisa mendefinisikan set kosong dengan fungsi <code class="docutils literal notranslate"><span class="pre">set()</span></code>. Jika kita mendefinisikan set kosong seperti list dan tuple sebelumnya, yaitu dengan <code class="docutils literal notranslate"><span class="pre">{}</span></code>, maka kita akan mendapat sebuah <code class="docutils literal notranslate"><span class="pre">dictionary</span></code> yang akan kita bahas setelah bagian ini.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "syahrulhamdani/bitlabs-webinar-2021",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./engineering/python/data-structures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="tuple.html" title="previous page">Tuple</a>
+    <a class='right-next' id="next-link" href="dictionary.html" title="next page">Dictionary</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Syahrul Hamdani<br/>
+        
+            &copy; Copyright Bitlabs Academy 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perulangan dengan While &#8212; Basic Python Programming</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Perulangan dengan For" href="for-loop.html" />
+    <link rel="prev" title="Pernyataan Kondisional" href="conditional-statement.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Basic Python Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Pengenalan Pemrograman Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../why-python.html">
+   Kenapa Harus Python?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro-to-notebook.html">
+   Pengenalan Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-types-and-operators.html">
+   Tipe Data dan Operator
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data-structures/index.html">
+   Struktur Data Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/list.html">
+     List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/tuple.html">
+     Tuple
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/set.html">
+     Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/dictionary.html">
+     Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Arus Kontrol
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditional-statement.html">
+     Pernyataan Kondisional
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Perulangan dengan While
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="for-loop.html">
+     Perulangan dengan For
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../modularity/index.html">
+   Konsep Modularitas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modularity/functions.html">
+     Fungsi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modularity/class.html">
+     Objek dan Kelas dalam Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modularity/modules.html">
+     Modul dan Paket dalam Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Referensi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../references.html">
+   Referensi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/engineering/python/control-flow/while-loop.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/syahrulhamdani/bitlabs-webinar-2021/main?urlpath=tree/book/engineering/python/control-flow/while-loop.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perulangan">
+   Perulangan
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#penggunaan-while">
+   Penggunaan
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keluar-dari-while-dengan-break">
+     Keluar dari
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+     dengan
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       break
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pernyataan-continue-dalam-perulangan">
+     Pernyataan
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       continue
+      </span>
+     </code>
+     dalam Perulangan
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="perulangan-dengan-while">
+<h1>Perulangan dengan While<a class="headerlink" href="#perulangan-dengan-while" title="Permalink to this headline">¶</a></h1>
+<p>Pada pernyataan kondisional, kode program masih dieksekusi dari atas ke bawah per baris. Perbedannya hanya ada pada apakah suatu blok kode dieksekusi atau tidak berdasarkan kondisi yang diberikan. Tapi, kita terkadang perlu juga untuk mengeksekusi sesuatu lebih dari satu kali dan berulang. Python membolehkan kita untuk melakukan hal tersebut dengan <code class="docutils literal notranslate"><span class="pre">while</span></code>. <span id="id1">[<a class="reference internal" href="../../../references.html#id22">Lub19</a>]</span></p>
+<div class="section" id="perulangan">
+<h2>Perulangan<a class="headerlink" href="#perulangan" title="Permalink to this headline">¶</a></h2>
+<p>Misalkan diberikan sebuah daftar nama dalam bentuk <code class="docutils literal notranslate"><span class="pre">list</span></code> berikut:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;james&quot;</span><span class="p">,</span> <span class="s2">&quot;jackson&quot;</span><span class="p">,</span> <span class="s2">&quot;lee&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Jika kita ingin menampilkan setiap nama yang ada pada <code class="docutils literal notranslate"><span class="pre">names</span></code>, cara paling sederhana adalah dengan mengakses satu per satu indeks seperti di bawah ini.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;james&quot;</span><span class="p">,</span> <span class="s2">&quot;jackson&quot;</span><span class="p">,</span> <span class="s2">&quot;lee&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>brown
+james
+jackson
+lee
+</pre></div>
+</div>
+</div>
+</div>
+<p>Masih bisa dilakukan jika jumlah elemennya tidak terlalu banyak. Tapi, akan buang-buang waktu dan merepotkan jika ternyata ada lebih dari 100 nama di dalamnya.</p>
+<p>Dalam setiap bahasa pemrograman, kita bisa melakukan perulangan secara otomatis tanpa harus mendaftarkan semua elemen, begitu juga Python. Konsep ini dikenal dengan <strong>Don’t Repeat Yourself (DRY)</strong>.</p>
+<div class="admonition-apa-itu-dry admonition">
+<p class="admonition-title">Apa Itu DRY?</p>
+<p>DRY is a principle of software development aimed at reducing repetition of software patterns,[1] replacing it with abstractions or using data normalization to avoid redundancy. <span id="id2">[<a class="reference internal" href="../../../references.html#id8">Wik21</a>]</span></p>
+</div>
+</div>
+<div class="section" id="penggunaan-while">
+<h2>Penggunaan <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#penggunaan-while" title="Permalink to this headline">¶</a></h2>
+<p>Untuk menggunakan <code class="docutils literal notranslate"><span class="pre">while</span></code> kita perlu membuat <strong>kondisi</strong> yang selama kondisi itu benar (bernilai <code class="docutils literal notranslate"><span class="pre">True</span></code>), blok kode dalam <code class="docutils literal notranslate"><span class="pre">while</span></code> akan terus dieksekusi. Sintaks <code class="docutils literal notranslate"><span class="pre">while</span></code> juga mirip dengan <code class="docutils literal notranslate"><span class="pre">if</span></code>, yaitu</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1"># run statement here</span>
+</pre></div>
+</div>
+<p>Untuk contoh kasus di atas, tujuan kita adalah <strong>menampilkan setiap elemen yang ada dalam <code class="docutils literal notranslate"><span class="pre">names</span></code></strong>. Maka, kondisi yang menyebabkan perulangan berhenti adalah ketika tidak ada elemen lagi yang bisa diakses atau <strong>sampai indeks terakhir</strong>. Oleh karena itu, kita akan menggunakan jumlah elemen dalam <code class="docutils literal notranslate"><span class="pre">names</span></code> sebagai batas perulangan. Langkah-langkah perulangannya adalah sebagai berikut:</p>
+<ol class="simple">
+<li><p>Definisikan jumlah elemen (opsional, bisa langsung dalam kondisi).</p></li>
+<li><p>Mulai dari indeks pertama atau <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p>Cek kondisi, selama indeks “saat ini” masih <strong>kurang dari</strong> jumlah elemen, lakukan langkah 4-6. Jika indeks “saat ini” <strong>sama dengan</strong> jumlah elemen, lakukan langkah 7.</p></li>
+<li><p>Tampilkan indeks “saat ini”.</p></li>
+<li><p>Tambah indeks untuk jadi indeks berikutnya.</p></li>
+<li><p>Kembali ke langkah 3.</p></li>
+<li><p>Jika langkah 3 terpenuhi, akhiri perulangan.</p></li>
+</ol>
+<p>Dari langkah-langkah yang sudah ditulis di atas, sintaks yang perlu ditulis adalah:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_names</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">num_names</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Untuk mengujinya, jalankan saja cell di bawah ini.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_names</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">num_names</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>brown
+james
+jackson
+lee
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-block alert-info docutils">
+<p><strong>Kuis:</strong> Lakukan perulangan untuk <code class="docutils literal notranslate"><span class="pre">names</span></code> dengan menggunakan indeks negatif!</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="keluar-dari-while-dengan-break">
+<h3>Keluar dari <code class="docutils literal notranslate"><span class="pre">while</span></code> dengan <code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#keluar-dari-while-dengan-break" title="Permalink to this headline">¶</a></h3>
+<p>Jika kita ingin melakukan perulangan sampai sesuatu terjadi, tapi kita tidak tahu kapan, kita bisa menggunakan pernyataan <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>brown
+james
+jackson
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pernyataan <code class="docutils literal notranslate"><span class="pre">while</span></code> di atas akan menampilkan nama yang ada dalam <code class="docutils literal notranslate"><span class="pre">names</span></code> sampai bertemu dengan nama dengan jumlah karakter yang kurang dari 5. Itulah kenapa <code class="docutils literal notranslate"><span class="pre">lee</span></code> tidak ditampilkan, yaitu karena jumlah karakter <code class="docutils literal notranslate"><span class="pre">lee</span></code> hanya 3.</p>
+</div>
+<div class="section" id="pernyataan-continue-dalam-perulangan">
+<h3>Pernyataan <code class="docutils literal notranslate"><span class="pre">continue</span></code> dalam Perulangan<a class="headerlink" href="#pernyataan-continue-dalam-perulangan" title="Permalink to this headline">¶</a></h3>
+<p>Selain kita bisa keluar dari sebuah blok kode perulangan, kita juga bisa melewati suatu baris pernyataan, jika kita tidak ingin keluar tapi hanya melewatkan suatu pernyataan dengan sengaja (<em>skip</em>). Ada pernyataan <code class="docutils literal notranslate"><span class="pre">continue</span></code> yang bisa digunakan.</p>
+<p>Dengan prinsip yang masih sama dengan <code class="docutils literal notranslate"><span class="pre">break</span></code>, misalkan kita ingin melanjutkan menampilkan nama dalam <code class="docutils literal notranslate"><span class="pre">names</span></code> meskipun ditemukan nama dengan jumlah karakter kurang dari 5. Kita bisa ganti <code class="docutils literal notranslate"><span class="pre">break</span></code> di atas dengan <code class="docutils literal notranslate"><span class="pre">continue</span></code> seperti di bawah ini.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;johnson&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>brown
+james
+jackson
+johnson
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pada kode di atas, kita tidak “keluar” dari <code class="docutils literal notranslate"><span class="pre">while</span></code>, tapi hanya melewati nama yang tidak memenuhi kondisi pada pernyataan <code class="docutils literal notranslate"><span class="pre">if</span></code>. Satu hal yang membedakan <code class="docutils literal notranslate"><span class="pre">continue</span></code> dengan <code class="docutils literal notranslate"><span class="pre">break</span></code> pada kode di atas adalah perlunya <em>increment</em> indeks dalam blok kode <code class="docutils literal notranslate"><span class="pre">if</span></code>. Ini dikarenakan <code class="docutils literal notranslate"><span class="pre">continue</span></code> tidak keluar dari <code class="docutils literal notranslate"><span class="pre">while</span></code>, tapi kembali ke atas untuk dilakukan pengecekan kondisi. Jika tidak ada penambahan indeks, maka nilai <code class="docutils literal notranslate"><span class="pre">idx</span></code> akan selalu sama, sehingga perulangan menjadi tak hingga (<em>infinite loop</em>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pada dasarnya, perulangan dengan <code class="docutils literal notranslate"><span class="pre">while</span></code> tergolong ke dalam <em>infinite loop</em> karena kode akan dieksekusi selama kondisi terpenuhi. Oleh karena itu, perulangan <code class="docutils literal notranslate"><span class="pre">while</span></code> memerlukan kondisi untuk berhenti dan logika kode supaya kondisi bisa jadi <strong>tidak terpenuhi (<code class="docutils literal notranslate"><span class="pre">False</span></code>)</strong> sedemikian sehingga perulangan bisa berhenti.</p>
+</div>
+<div class="alert alert-block alert-info docutils">
+<p><strong>Kuis:</strong> Buat perulangan dengan <code class="docutils literal notranslate"><span class="pre">while</span></code> untuk membuat sebuah string <em>news</em> yang panjangnya <strong>150 karakter</strong> dari kumpulan judul berita dalam <code class="docutils literal notranslate"><span class="pre">headlines</span></code> yang setiap judul dipisahkan oleh <strong>spasi</strong>. Jika diperlukan, potong judul berita terakhir sedemikian hingga panjang keseluruhan <code class="docutils literal notranslate"><span class="pre">news</span></code> tepat <strong>150 karakter</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">headlines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pemprov DKI Perpanjang PPKM Mikro hingga 14 Juni&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Manchester City Dekati Sergio Ramos&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;8 Juta Dosis Vaksin Sinovac Tiba di Tanah Air&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;10 Potret Kece Tatjana Saphira Berkacamata, Stylish Banget!&quot;</span><span class="p">,]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">headlines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pemprov DKI Perpanjang PPKM Mikro hingga 14 Juni&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Manchester City Dekati Sergio Ramos&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;8 Juta Dosis Vaksin Sinovac Tiba di Tanah Air&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;10 Potret Kece Tatjana Saphira Berkacamata, Stylish Banget!&quot;</span><span class="p">,]</span>
+
+<span class="c1"># KETIK DI SINI</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "syahrulhamdani/bitlabs-webinar-2021",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./engineering/python/control-flow"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="conditional-statement.html" title="previous page">Pernyataan Kondisional</a>
+    <a class='right-next' id="next-link" href="for-loop.html" title="next page">Perulangan dengan For</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Syahrul Hamdani<br/>
+        
+            &copy; Copyright Bitlabs Academy 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

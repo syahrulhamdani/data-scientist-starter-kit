@@ -1,0 +1,760 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objek dan Kelas dalam Python &#8212; Basic Python Programming</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Modul dan Paket dalam Python" href="modules.html" />
+    <link rel="prev" title="Fungsi" href="functions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Basic Python Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../why-python.html">
+   Kenapa Harus Python?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro-to-notebook.html">
+   Pengenalan Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-types-and-operators.html">
+   Tipe Data dan Operator
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data-structures/index.html">
+   Struktur Data Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/list.html">
+     List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/tuple.html">
+     Tuple
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/set.html">
+     Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data-structures/dictionary.html">
+     Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../control-flow/index.html">
+   Arus Kontrol
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../control-flow/conditional-statement.html">
+     Pernyataan Kondisional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../control-flow/while-loop.html">
+     Perulangan dengan While
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../control-flow/for-loop.html">
+     Perulangan dengan For
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Konsep Modularitas
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions.html">
+     Fungsi
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Objek dan Kelas dalam Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modules.html">
+     Modul dan Paket dalam Python
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Referensi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../references.html">
+   Referensi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/python/modularity/class.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/syahrulhamdani/bitlabs-webinar-2021/main?urlpath=tree/book/python/modularity/class.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apa-itu-objek">
+   Apa Itu Objek?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kelas-dalam-python">
+   Kelas dalam Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atribut">
+     Atribut
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metode">
+     Metode
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metode-inisialisasi">
+       Metode Inisialisasi
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="objek-dan-kelas-dalam-python">
+<h1>Objek dan Kelas dalam Python<a class="headerlink" href="#objek-dan-kelas-dalam-python" title="Permalink to this headline">¶</a></h1>
+<p>Semua yang ada di dalam Python adalah objek. Mulai dari angka (<code class="docutils literal notranslate"><span class="pre">int</span></code> sampai <code class="docutils literal notranslate"><span class="pre">complex</span></code>) sampai fungsi, semua adalah objek. Setiap ekspresi yang kita tulis, seperti penugasan pada variabel, dalam Python juga merupakan objek. Bahkan, kita sendiri juga bisa membuat objek secara manual dari awal, salah satunya menggunakan <code class="docutils literal notranslate"><span class="pre">class</span></code>.</p>
+<div class="section" id="apa-itu-objek">
+<h2>Apa Itu Objek?<a class="headerlink" href="#apa-itu-objek" title="Permalink to this headline">¶</a></h2>
+<p>Objek adalah <strong>sebuah abstraksi Python untuk data</strong>. Semua data yang ada dalam sebuah program Python direpresentasikan oleh objek atau berelasi dengan objek. Bahkan, kode yang kita tulis juga merupakan objek. <span id="id1">[<a class="reference internal" href="../../references.html#id12">Fou21b</a>]</span></p>
+<p>Kita bisa menganggap objek sebagai <strong>kata benda</strong> dan metode yang melekat di dalamnya sebagai <strong>kata kerja</strong>. Sebuah objek merepresentasikan suatu individu, dan bagaimana objek tersebut berinteraksi dengan objek lain didefinisikan dengan metode yang melekat di dalamnya. <span id="id2">[<a class="reference internal" href="../../references.html#id22">Lub19</a>]</span></p>
+<p>Sebagai contoh, misalkan kita definisikan variabel <code class="docutils literal notranslate"><span class="pre">num</span> <span class="pre">=</span> <span class="pre">7</span></code>. Maka, <code class="docutils literal notranslate"><span class="pre">num</span></code> merupakan sebuah <em>instance</em> dari objek <code class="docutils literal notranslate"><span class="pre">7</span></code> yang menyimpan nilai <code class="docutils literal notranslate"><span class="pre">7</span></code> yang memiliki metode untuk penjumlahan, perkalian, dan lainnya. Jika kita definisikan variabel lain yang menyimpan objek <code class="docutils literal notranslate"><span class="pre">8</span></code>, ini adalah objek yang berbeda. Dibalik layar, Python menyediakan kelas integer bawaan yang menyimpan nilai <code class="docutils literal notranslate"><span class="pre">7</span></code> dan <code class="docutils literal notranslate"><span class="pre">8</span></code>.</p>
+<p>Contoh yang lain adalah string <code class="docutils literal notranslate"><span class="pre">bitlabs</span></code> dan <code class="docutils literal notranslate"><span class="pre">bootcamp</span></code> juga merupakan objek dalam Python.  Metode yang berlaku untuk kedua string tersebut seperti <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code> dan <code class="docutils literal notranslate"><span class="pre">join()</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Setiap objek dalam Python memiliki sebuah <strong>identitas</strong>, <strong>tipe data</strong>, dan <strong>nilai</strong>. Untuk lebih jelasnya, bisa dibaca dokumentasi <a class="reference external" href="https://docs.python.org/3/reference/datamodel.html">data model dalam Python</a></p>
+</div>
+</div>
+<div class="section" id="kelas-dalam-python">
+<h2>Kelas dalam Python<a class="headerlink" href="#kelas-dalam-python" title="Permalink to this headline">¶</a></h2>
+<p>Secara umum, kelas (<em>class</em>) adalah sebuah cetak biru sebuah program untuk membuat objek baru beserta tipe data, atribut, dan perilaku baru. Dengan kelas, kita bisa mendesain bagaimana objek baru bisa terbuat dan apa yang bisa dilakukan oleh objek tersebut.</p>
+<p>Sintaks umum untuk membuat sebuah <em>class</em> adalah sebagai berikut. <span id="id3">[<a class="reference internal" href="../../references.html#id13">Fou21a</a>]</span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Sebuah kelas harus diawali dengan kata kunci <em>class</em>, kemudian diikuti oleh nama kelas, lalu diakhiri dengan <code class="docutils literal notranslate"><span class="pre">:</span></code>. Umumnya, pernyataan dalam sebuah kelas berbentuk definisi fungsi yang berguna untuk menyimpan atribut dan metode. Sebagai contoh, mari kita buat sebuah kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code> yang sangat sederhana karena tidak memiliki informasi apa-apa.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sekali lagi, pernyataan <code class="docutils literal notranslate"><span class="pre">pass</span></code> digunakan sebagai pengganti kode dan menyatakan bahwa blok kode tersebut tidak melakukan apa-apa.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Instansiasi objek dari kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code> bisa dilakukan dengan memanggil nama kelasnya sama seperti pemanggilan fungsi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persian</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">()</span>
+<span class="n">scottish_fold</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">persian</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">persian</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scottish_fold</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">scottish_fold</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Cat object at 0x10cb3cb50&gt; &lt;class &#39;__main__.Cat&#39;&gt;
+&lt;__main__.Cat object at 0x10cb3cb20&gt; &lt;class &#39;__main__.Cat&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kita sudah membuat 2 buah objek, <code class="docutils literal notranslate"><span class="pre">Persian</span></code> dan <code class="docutils literal notranslate"><span class="pre">ScottishFold</span></code>. Pada pernyatan <code class="docutils literal notranslate"><span class="pre">print</span></code> di atas, karena kita tidak menentukan bagaimana implementasi fungsi <code class="docutils literal notranslate"><span class="pre">print</span></code> kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code>, kita akan mendapatkan sesuatu seperti <code class="docutils literal notranslate"><span class="pre">&lt;__main__.Cat</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x108ea3340&gt;</span></code>. Kedua objek tersebut tidak bisa melakukan apa-apa dan tidak memiliki informasi apapun karena kita tidak menyediakannya.</p>
+<div class="section" id="atribut">
+<h3>Atribut<a class="headerlink" href="#atribut" title="Permalink to this headline">¶</a></h3>
+<p>Atribut adalah <strong>sebuah variabel yang berada dalam sebuah <em>class</em> atau objek</strong>. Selama pendefinisian kelas atau setelah suatu objek dibuat dari kelas tersebut, kita bisa mendefinisikan atribut pada objek tersebut. Sebagai contoh, kita akan tambahkan atribut <code class="docutils literal notranslate"><span class="pre">kind</span></code> pada objek <code class="docutils literal notranslate"><span class="pre">persian</span></code> dan <code class="docutils literal notranslate"><span class="pre">scottish_fold</span></code> yang merepresentasikan jenis kucing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persian</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;persian&quot;</span>
+<span class="n">scottish_fold</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;scottish fold&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;kind of cat:&quot;</span><span class="p">,</span> <span class="n">persian</span><span class="o">.</span><span class="n">kind</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;kinf of cat:&quot;</span><span class="p">,</span> <span class="n">scottish_fold</span><span class="o">.</span><span class="n">kind</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kind of cat: persian
+kinf of cat: scottish fold
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cara pendefinisian atribut seperti di atas tentu saja tidak efektif dan tidak akan melekat pada objek yang akan dibuat setelahnya. Hal ini dikarenakan atribut <code class="docutils literal notranslate"><span class="pre">kind</span></code> merupakan atribut objek (<em>instance attribute</em>) yang melekat pada objek tertentu saja. Apa yang kita inginkan mungkin adalah atribut objek untuk merepresentasikan informasi yang sama pada setiap objek yang dibuat, meskipun nilai nya bisa berbeda.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Untuk itulah, sangat disarankan mendefinisikan atribut objek pada saat pendefinisian <em>class</em>.</p>
+</div>
+<p>Selain atribut objek, <em>class</em> juga bisa diberikan atribut kelas yang akan melekat pada kelas, bagaimanapun dan apapun objek yang kita buat, nilai atribut kelas akan tetap sama untuk satu kelas. Misalkan, karena semua kucing normal memiliki 4 kaki, kita bisa tambahkan informasi ini sebagai atribut kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="n">num_feet</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persian</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">()</span>
+<span class="n">persian</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;persian&quot;</span>
+
+<span class="n">scottish_fold</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">()</span>
+<span class="n">scottish_fold</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;scottish fold&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;num of feet of persian cat:&quot;</span><span class="p">,</span> <span class="n">persian</span><span class="o">.</span><span class="n">num_feet</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;num of feet of scottish fold cat:&quot;</span><span class="p">,</span> <span class="n">scottish_fold</span><span class="o">.</span><span class="n">num_feet</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num of feet of persian cat: 4
+num of feet of scottish fold cat: 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pada kode di atas, nilai <code class="docutils literal notranslate"><span class="pre">num_feet</span></code> akan selalu sama untuk satu kelas meskipun objek yang dibuat berbeda. Untuk pendefinisian atribut objek pada saat definisi kelas, kita bisa menggunakan metode <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Tapi, sebelum kita membahasnya lebih jauh, kita perlu tahu secara umum apa yang dimaksud dengan metode dalam sebuah kelas.</p>
+</div>
+<div class="section" id="metode">
+<h3>Metode<a class="headerlink" href="#metode" title="Permalink to this headline">¶</a></h3>
+<p>Pada dasarnya, metode adalah <strong>sebuah fungsi yang melekat pada kelas atau objek</strong>. Sebelumnya pada <a class="reference internal" href="../data-structures/index.html"><span class="doc">Struktur Data Python</span></a>, kita mengenal beberapa metode yang hanya dimiliki oleh tipe data tertentu, seperti <code class="docutils literal notranslate"><span class="pre">title()</span></code> yang hanya ada pada tipe data string, <code class="docutils literal notranslate"><span class="pre">append()</span></code> yang hanya ada pada tipe data list, dan lainnya. Karena kita sedang membuat sebuah objek baru, yang tentu saja akan melahirkan tipe data baru, kita juga bisa mendefinisikan metode tertentu <strong>yang membantu tugas dan objektif dari kelas tersebut</strong>.</p>
+<div class="section" id="metode-inisialisasi">
+<h4>Metode Inisialisasi<a class="headerlink" href="#metode-inisialisasi" title="Permalink to this headline">¶</a></h4>
+<p>Metode pertama adalah metode inisialisasi yang digunakan untuk menginisialisasi atribut objek setiap kali objek baru dibuat. Metode ini, secara khusus, <strong>harus didefinisikan dengan nama <code class="docutils literal notranslate"><span class="pre">__init__</span></code></strong> (perhatikan dua garis bawah <code class="docutils literal notranslate"><span class="pre">__</span></code> yang mengapit kata kunci <code class="docutils literal notranslate"><span class="pre">init</span></code>). Umumnya, bentuk sebuah definisi kelas dalam Python seperti di bawah ini.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Ada 2 kata kunci baru pada kode di atas: <code class="docutils literal notranslate"><span class="pre">__init__</span></code> dan <code class="docutils literal notranslate"><span class="pre">self</span></code>. <em>Keyword</em> <code class="docutils literal notranslate"><span class="pre">__init__</span></code> merupakan metode spesial bawaan Python untuk menginisialisasi objek baru dari kelas tersebut. Sedangkan, parameter <code class="docutils literal notranslate"><span class="pre">self</span></code> merujuk pada objek yang akan dibuat. Meskipun <code class="docutils literal notranslate"><span class="pre">self</span></code> bukanlah kata kunci bawaan Python dan kita bisa menggantinya dengan parameter lain, tapi ini adalah suatu konvensi dari komunitas Python untuk memudahkan perawatan kode di masa mendatang.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>Pada bagian ini, kita mungkin akan sering melihat kata kunci sejenis sebagai penamaan metode dalam kelas. Python punya sebutan sendiri untuk memudahkan penyebutan, yaitu <em>dunder method</em>.</p></li>
+<li><p>Parameter pertama dari setiap metode yang didefinisikan dalam kelas harus merujuk pada objek yang akan dibuat, yaitu <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p>Sangat disarankan untuk mengikuti konvensi dari komunitas seperti menggunakan <code class="docutils literal notranslate"><span class="pre">self</span></code> dan bukan yang lainnya, supaya tidak ada orang (termasuk kita sendiri) yang harus menebak-nebak apa yang dimaksud dengan <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+</ul>
+</div>
+<p>Misalkan, kita ingin membuat sebuah objek yang merepresentasikan seekor kucing lengkap dengan informasi seperti karakter, dan perilaku seekor kucing. Contoh definisi kelasnya seperti di bawah ini.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Cat class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;persian&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;meow..&quot;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Cat class.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;persian&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;meow..&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setiap inisialisasi objek dari kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code>, karena pada metode inisialisasi terdapat 1 parameter <code class="docutils literal notranslate"><span class="pre">name</span></code> untuk <em>positional argument</em> dan 1 parameter <code class="docutils literal notranslate"><span class="pre">kind</span></code> untuk <em>optional parameter</em>, kita harus menyediakan argumen-argumen tersebut. Ingat bahwa, kata kunci <strong><code class="docutils literal notranslate"><span class="pre">self</span></code> hanya digunakan untuk merujuk ke objek yang dibuat</strong> dan <strong>tidak perlu diberi argumen</strong>, sehingga kita bisa hiraukan pada saat inisialisasi. Dengan definisi kelas di atas, objek yang dibuat pasti akan memiliki atribut <code class="docutils literal notranslate"><span class="pre">kind</span></code> dan <code class="docutils literal notranslate"><span class="pre">name</span></code> yang melekat pada objek, <strong>bukan kelas</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persian</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;molly&quot;</span><span class="p">)</span>
+<span class="n">bengal</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;ben&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bengal&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is a </span><span class="si">{}</span><span class="s2"> cat. She sounds like </span><span class="si">{}</span><span class="s2">..&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">persian</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">persian</span><span class="o">.</span><span class="n">kind</span><span class="p">,</span> <span class="n">persian</span><span class="o">.</span><span class="n">sound</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is a </span><span class="si">{}</span><span class="s2"> cat. He sounds like </span><span class="si">{}</span><span class="s2">..&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bengal</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">bengal</span><span class="o">.</span><span class="n">kind</span><span class="p">,</span> <span class="n">bengal</span><span class="o">.</span><span class="n">sound</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>molly is a persian cat. She sounds like meow....
+ben is a bengal cat. He sounds like meow....
+</pre></div>
+</div>
+</div>
+</div>
+<p>Perhatikan bahwa kita bisa mengakses atribut objek dengan menggunakan notasi <code class="docutils literal notranslate"><span class="pre">object.attr</span></code>, di mana <code class="docutils literal notranslate"><span class="pre">object</span></code> adalah objek yang dibuat (<code class="docutils literal notranslate"><span class="pre">persian</span></code>/<code class="docutils literal notranslate"><span class="pre">bengal</span></code>), dipisahkan oleh <code class="docutils literal notranslate"><span class="pre">.</span></code>, lalu nama atribut yang ingin diakses (<code class="docutils literal notranslate"><span class="pre">kind</span></code> dan <code class="docutils literal notranslate"><span class="pre">name</span></code>). Kita bisa menambahkan berapapun banyaknya atribut objek pada suatu kelas, tinggal tambahkan saja sebagai parameter pada metode inisialisasi <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
+<p>Metode <code class="docutils literal notranslate"><span class="pre">sound</span></code> pada kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code> juga memiliki parameter <code class="docutils literal notranslate"><span class="pre">self</span></code> sebagai parameter pertama. Bahkan, hanya satu parameter saja, <code class="docutils literal notranslate"><span class="pre">self</span></code>. Ini sama saja seperti fungsi biasa yang tidak memiliki parameter karena pemanggilan metode sebuah objek menghiraukan <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setiap kali kita ingin membuat metode objek dalam kelas, parameter pertama haruslah <code class="docutils literal notranslate"><span class="pre">self</span></code> yang merujuk pada objek yang dibuat. Pengaksesan atribut objek menggunakan sintaks <code class="docutils literal notranslate"><span class="pre">object.attr</span></code> setelah inisialisasi objek. Sedangkan, pengaksesan atribut atau metode objek dalam kelas, menggunakan <code class="docutils literal notranslate"><span class="pre">self.attr</span></code> atau <code class="docutils literal notranslate"><span class="pre">self.method</span></code> dengan <code class="docutils literal notranslate"><span class="pre">attr</span></code> dan <code class="docutils literal notranslate"><span class="pre">method</span></code> berturut-turut adalah nama atribut dan metode objeknya.</p>
+</div>
+<p>Sebagai contoh, mari kita perbarui kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code> dengan metode yang lebih kompleks seperti di bawah ini dan eksplor beberapa metode dan atributnya.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Define a cat.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">food</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;persian&quot;</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s2">&quot;male&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initiate a cat.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            name: cat&#39;s name</span>
+<span class="sd">            food: cat&#39;s food</span>
+<span class="sd">            kind: cat breed. By default is persian.</span>
+<span class="sd">            gender: male/female. By default is male.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="n">food</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_male</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span> <span class="k">else</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;meow..&quot;</span>
+
+    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Eat a given food.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">food</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Yeay! it&#39;s </span><span class="si">{}</span><span class="s2">. Time to eat!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;Oh no, it&#39;s </span><span class="si">{}</span><span class="s2">. Only </span><span class="si">{}</span><span class="s2">, please.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">greet_person</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">person</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Greet a given person.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi, </span><span class="si">{}</span><span class="s2">! nice to meet you.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">greet_cat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">another_cat</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Greet another cat.&quot;&quot;&quot;</span>
+        <span class="n">looks</span> <span class="o">=</span> <span class="s2">&quot;handsome&quot;</span> <span class="k">if</span> <span class="n">another_cat</span><span class="o">.</span><span class="n">is_male</span> <span class="k">else</span> <span class="s2">&quot;beautiful&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi, </span><span class="si">{}</span><span class="s2">! You look </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">another_cat</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">looks</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Define a cat.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">food</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;persian&quot;</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s2">&quot;male&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initiate a cat.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            name: cat&#39;s name</span>
+<span class="sd">            food: cat&#39;s food</span>
+<span class="sd">            kind: cat breed. By default is persian.</span>
+<span class="sd">            gender: male/female. By default is male.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="n">food</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_male</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span> <span class="k">else</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;meow..&quot;</span>
+
+    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Eat a given food.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">food</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Yeay! it&#39;s </span><span class="si">{}</span><span class="s2">. Time to eat!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;Oh no, it&#39;s </span><span class="si">{}</span><span class="s2">. Only </span><span class="si">{}</span><span class="s2">, please.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">greet_person</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">person</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Greet a given person.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi, </span><span class="si">{}</span><span class="s2">! nice to meet you.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">greet_cat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">another_cat</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Greet another cat.&quot;&quot;&quot;</span>
+        <span class="n">looks</span> <span class="o">=</span> <span class="s2">&quot;handsome&quot;</span> <span class="k">if</span> <span class="n">another_cat</span><span class="o">.</span><span class="n">is_male</span> <span class="k">else</span> <span class="s2">&quot;beautiful&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Hi, </span><span class="si">{}</span><span class="s2">! You look </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">another_cat</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">looks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molly</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;Molly&quot;</span><span class="p">,</span> <span class="n">food</span><span class="o">=</span><span class="s2">&quot;fish&quot;</span><span class="p">)</span>
+<span class="n">ben</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="n">food</span><span class="o">=</span><span class="s2">&quot;pizza&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bengal&quot;</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s2">&quot;non-binary&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;name:&quot;</span><span class="p">,</span> <span class="n">molly</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;breed:&quot;</span><span class="p">,</span> <span class="n">molly</span><span class="o">.</span><span class="n">kind</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gender:&quot;</span><span class="p">,</span> <span class="s2">&quot;male&quot;</span> <span class="k">if</span> <span class="n">molly</span><span class="o">.</span><span class="n">is_male</span> <span class="k">else</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;favorite food:&quot;</span><span class="p">,</span> <span class="n">molly</span><span class="o">.</span><span class="n">food</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">molly</span><span class="o">.</span><span class="n">greet_person</span><span class="p">(</span><span class="s2">&quot;john&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">molly</span><span class="o">.</span><span class="n">greet_cat</span><span class="p">(</span><span class="n">ben</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name: Molly
+breed: persian
+gender: male
+favorite food: fish
+Hi, john! nice to meet you.
+Hi, Ben! You look beautiful
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;name:&quot;</span><span class="p">,</span> <span class="n">ben</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;breed:&quot;</span><span class="p">,</span> <span class="n">ben</span><span class="o">.</span><span class="n">kind</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gender:&quot;</span><span class="p">,</span> <span class="s2">&quot;male&quot;</span> <span class="k">if</span> <span class="n">ben</span><span class="o">.</span><span class="n">is_male</span> <span class="k">else</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;favorite food:&quot;</span><span class="p">,</span> <span class="n">ben</span><span class="o">.</span><span class="n">food</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ben</span><span class="o">.</span><span class="n">greet_person</span><span class="p">(</span><span class="s2">&quot;anna&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ben</span><span class="o">.</span><span class="n">greet_cat</span><span class="p">(</span><span class="n">molly</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name: Ben
+breed: bengal
+gender: female
+favorite food: pizza
+Hi, anna! nice to meet you.
+Hi, Molly! You look handsome
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">molly</span><span class="o">.</span><span class="n">eat</span><span class="p">(</span><span class="s2">&quot;pizza&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Oh no, it&#39;s pizza. Only fish, please.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ben</span><span class="o">.</span><span class="n">eat</span><span class="p">(</span><span class="s2">&quot;tacos&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Oh no, it&#39;s tacos. Only pizza, please.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-block alert-info docutils">
+<p><strong>Kuis:</strong> Buatlah sebuah kelas <code class="docutils literal notranslate"><span class="pre">ProductList</span></code> yang merepresentasikan daftar produk suatu toko yang menyimpan daftar nama produk yang masih/akan dijual dan daftar nama produk yang sudah terjual. Sebagai sebuah daftar produk suatu toko, beberapa perilaku yang bisa dilakukan atau dikenai pekerjaan adalah sebagai berikut:</p>
+<ul class="simple">
+<li><p>Menambah produk baru ke dalam produk yang akan dijual</p></li>
+<li><p>Memindahkan produk yang terjual dari daftar produk dijual ke dalam daftar produk terjual.</p></li>
+<li><p>Menampilkan daftar produk yang sedang dijual</p></li>
+<li><p>Menampilkan daftar produk yang sudah terjual</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "syahrulhamdani/bitlabs-webinar-2021",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python/modularity"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">Fungsi</a>
+    <a class='right-next' id="next-link" href="modules.html" title="next page">Modul dan Paket dalam Python</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Syahrul Hamdani<br/>
+        
+            &copy; Copyright Bitlabs Academy 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
