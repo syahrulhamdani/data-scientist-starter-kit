@@ -71,6 +71,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+      <img src="../../_static/bitlabs.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
       
@@ -83,7 +85,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
-   Welcome
+   Selamat Datang!
   </a>
  </li>
 </ul>
@@ -96,11 +98,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../why-python.html">
    Kenapa Harus Python?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-to-notebook.html">
-   Pengenalan Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -163,33 +160,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../control-flow/for-loop.html">
      Perulangan dengan For
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../modularity/index.html">
-   Konsep Modularitas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../modularity/functions.html">
-     Fungsi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../modularity/class.html">
-     Objek dan Kelas dalam Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../modularity/modules.html">
-     Modul dan Paket dalam Python
     </a>
    </li>
   </ul>
@@ -427,20 +397,13 @@ length of last_5_years var: 5
 </ul>
 <p>Detail fungsi bawaan yang disediakan oleh Python dapat diakses dan kemudian dibaca di <a class="reference external" href="https://docs.python.org/3.8/library/functions.html">dokumentasi</a>. Khusus untuk metode dalam list, silakan baca <a class="reference external" href="https://docs.python.org/3.8/library/stdtypes.html#lists">dokumentasi khusus list</a>.</p>
 </div>
-<div class="alert alert-block alert-info docutils">
-<p><strong>Kuis:</strong></p>
+<div class="admonition-eksplorasi admonition">
+<p class="admonition-title">Eksplorasi</p>
 <ol class="simple">
 <li><p>Buatlah sebuah list <code class="docutils literal notranslate"><span class="pre">less_than_ten</span></code> yang berisi bilangan 0 sampai 9: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">...,</span> <span class="pre">9]</span></code>.</p></li>
 <li><p>Urutkan list <code class="docutils literal notranslate"><span class="pre">less_than_ten</span></code> dimulai dari yang paling besar hingga paling kecil.</p></li>
 <li><p>Buat sebuah string dari elemen-elemen <code class="docutils literal notranslate"><span class="pre">less_than_ten</span></code> yang dipisahkan oleh kata <code class="docutils literal notranslate"><span class="pre">&quot;bit&quot;</span></code>.</p></li>
 </ol>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="indexing-dan-slicing">
@@ -488,8 +451,9 @@ names[-1]: Josh
 <p class="admonition-title">Tip</p>
 <p>jika kita ingin mengakses nilai awal dan akhir suatu list, kita tidak perlu menyertakan indeks <code class="docutils literal notranslate"><span class="pre">0</span></code> dan indeks <code class="docutils literal notranslate"><span class="pre">n-1</span></code> karena kita bisa langsung tulis <code class="docutils literal notranslate"><span class="pre">names[:2]</span></code> dan <code class="docutils literal notranslate"><span class="pre">names[2:]</span></code> untuk mengakses 2 elemen pertama dan 2 elemen terakhir.</p>
 </div>
-<div class="alert alert-block alert-info docutils">
-<p><strong>Kuis:</strong> Dari list <code class="docutils literal notranslate"><span class="pre">random_dates</span></code> di bawah ini, coba tampilkan tanggal-tanggal dengan tahun genap dan juga gasal.</p>
+<div class="admonition-eksplorasi admonition">
+<p class="admonition-title">Eksplorasi</p>
+<p>Dari list <code class="docutils literal notranslate"><span class="pre">random_dates</span></code> di bawah ini, coba tampilkan tanggal-tanggal dengan tahun genap dan juga gasal.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
