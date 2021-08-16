@@ -39,8 +39,8 @@ print(string_in_set, type(string_in_set))
 # 
 # Untuk mendukung operasi tersebut, Python sudah menyediakan beberapa fungsi dan metode bawaan. Silakan baca dokumentasi Python [ini](https://docs.python.org/3.8/library/stdtypes.html#set-types-set-frozenset). Mari kita coba implementasikan beberapa pada kuis berikut.
 # 
-# ````{div} alert alert-block alert-info
-# **Kuis:** Menggunakan fungsi dan metode bawaan untuk `set`, jawab/implementasikan soal di bawah ini:
+# ````{admonition} Eksplorasi
+# Menggunakan fungsi dan metode bawaan untuk `set`, jawab/implementasikan soal di bawah ini:
 # 1. Definisikan 2 set menurut gambar di atas, dengan nama variabel `female_names` (kiri) dan `male_names` (kanan).
 # 2. Tampilkan 2 variabel tersebut dan jumlah masing-masing elemen.
 # 3. Buat variabel `all_names` yang berisikan semua nama gabungan dari `female_names` dan `male_names`.

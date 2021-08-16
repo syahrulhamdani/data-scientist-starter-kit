@@ -107,8 +107,8 @@ print(height)
 # sequential_dict["kevin"] = 171
 # ```
 # 
-# ```{div} alert alert-block alert-info
-# **Kuis:** Buatlah dictionary dengan nama `population` yang berisikan data berikut ini.
+# ```{admonition} Eksplorasi
+# Buatlah dictionary dengan nama `population` yang berisikan data berikut ini.
 # 
 # | keys | value |
 # | ---- | ----- |

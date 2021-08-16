@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Konsep Modularitas" href="../modularity/index.html" />
+    <link rel="next" title="Referensi" href="../../references.html" />
     <link rel="prev" title="Perulangan dengan While" href="while-loop.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -71,6 +71,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+      <img src="../../_static/bitlabs.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
       
@@ -83,7 +85,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
-   Welcome
+   Selamat Datang!
   </a>
  </li>
 </ul>
@@ -96,11 +98,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../why-python.html">
    Kenapa Harus Python?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-to-notebook.html">
-   Pengenalan Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -163,33 +160,6 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Perulangan dengan For
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../modularity/index.html">
-   Konsep Modularitas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../modularity/functions.html">
-     Fungsi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../modularity/class.html">
-     Objek dan Kelas dalam Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../modularity/modules.html">
-     Modul dan Paket dalam Python
     </a>
    </li>
   </ul>
@@ -615,34 +585,21 @@ stephany
 <div class="section" id="perulangan-pada-dictionary">
 <h2>Perulangan pada Dictionary<a class="headerlink" href="#perulangan-pada-dictionary" title="Permalink to this headline">¶</a></h2>
 <p>Dictionary mempunyai metode bawaan <code class="docutils literal notranslate"><span class="pre">items()</span></code> yang mengembalikan sebuah <code class="docutils literal notranslate"><span class="pre">list</span></code> atas pasangan-pasangan <code class="docutils literal notranslate"><span class="pre">key</span></code> dan <code class="docutils literal notranslate"><span class="pre">value</span></code> sebagai <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. Sehingga, dengan perulangan <code class="docutils literal notranslate"><span class="pre">for</span></code>, kita bisa mengakses <code class="docutils literal notranslate"><span class="pre">key</span></code> dan <code class="docutils literal notranslate"><span class="pre">value</span></code> seperti pada contoh kasus pertama di atas.</p>
-<div class="alert alert-block alert-info docutils">
+<div class="admonition-eksplorasi admonition">
+<p class="admonition-title">Eksplorasi</p>
 <p>Misalkan kita punyai variabel <code class="docutils literal notranslate"><span class="pre">dict_manifesto</span></code> yang merupakan <code class="docutils literal notranslate"><span class="pre">manifesto</span></code> dalam bentuk dictionary dengan <code class="docutils literal notranslate"><span class="pre">key</span></code> adalah nama barang dan <code class="docutils literal notranslate"><span class="pre">value</span></code> adalah beratnya.</p>
 <ol class="simple">
 <li><p>Definisikan <code class="docutils literal notranslate"><span class="pre">dict_manifesto</span></code> sebagai representasi dictionary dari <code class="docutils literal notranslate"><span class="pre">manifesto</span></code>.</p></li>
 <li><p>Menggunakan <code class="docutils literal notranslate"><span class="pre">items()</span></code>, tampilkan pasangan <code class="docutils literal notranslate"><span class="pre">key</span></code> dan <code class="docutils literal notranslate"><span class="pre">value</span></code> dalam pola <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code> menggunakan fungsi <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p></li>
 </ol>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="alert alert-block alert-info docutils">
-<p><strong>Kuis:</strong>
-Dengan masih menggunakan <code class="docutils literal notranslate"><span class="pre">dict_manifesto</span></code>, definisikan dulu <code class="docutils literal notranslate"><span class="pre">purchased_product</span></code> sebagai pemetaan antara nama produk dengan jumlah yang dibeli.</p>
+<div class="admonition-eksplorasi admonition">
+<p class="admonition-title">Eksplorasi</p>
+<p>Dengan masih menggunakan <code class="docutils literal notranslate"><span class="pre">dict_manifesto</span></code>, definisikan dulu <code class="docutils literal notranslate"><span class="pre">purchased_product</span></code> sebagai pemetaan antara nama produk dengan jumlah yang dibeli.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">purchased_product</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;computer&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cheeses&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;dog kennels&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;bananas&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Dari <code class="docutils literal notranslate"><span class="pre">purchased_product</span></code> di atas, kita ingin mengirimkan produk-produk di dalamnya ke para pembeli. Jika sekarang batas maksimal muatan dalam kargo adalah 1000, produk apa saja dalam <code class="docutils literal notranslate"><span class="pre">purchased_product</span></code> yang bisa dikirim, dengan berat masing-masing produk sesuai pada <code class="docutils literal notranslate"><span class="pre">dict_manifesto</span></code>.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="list-set-dan-dictionary-comprehension">
@@ -707,25 +664,20 @@ True
 <p>Jika memungkinkan, dalam mendefinisikan sebuah barisan, lakukanlah <em>list comprehension</em> dibanding perulangan <code class="docutils literal notranslate"><span class="pre">for</span></code> biasa. Hal ini karena <em>list comprehension</em> lebih efektif dan cepat dari segi memori dan <em>runtime</em>.</p>
 </div>
 <p>Implementasi <em>set comprehension</em> juga serupa dengan <em>list comprehension</em>, yang membedakan hanyalah <code class="docutils literal notranslate"><span class="pre">set</span></code> menggunakan <code class="docutils literal notranslate"><span class="pre">{}</span></code>. Sehingga, bentuk <em>set comprehension</em> adalah <code class="docutils literal notranslate"><span class="pre">{expression</span> <span class="pre">for</span> <span class="pre">item</span> <span class="pre">in</span> <span class="pre">iterable}</span></code>.</p>
-<div class="alert alert-block alert-info docutils">
+<div class="admonition-eksplorasi admonition">
+<p class="admonition-title">Eksplorasi</p>
 <p>Untuk kasus nomor 2, silakan dicoba sendiri. Silakan definisikan <code class="docutils literal notranslate"><span class="pre">unique_names</span></code> sebagai <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
 <ol class="simple">
 <li><p>Membuat variabel <code class="docutils literal notranslate"><span class="pre">unique_names</span></code> yang berisikan nama-nama dalam <code class="docutils literal notranslate"><span class="pre">names</span></code> yang baru dan tidak boleh ada duplikat</p></li>
 </ol>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
 <p>Untuk <em>dictionary comprehension</em> juga memiliki implementasi yang serupa dengan <em>set comprehension</em> dalam hal kurung kurawal <code class="docutils literal notranslate"><span class="pre">{}</span></code>. Akan tetapi, yang membedakan adalah adanya <code class="docutils literal notranslate"><span class="pre">key</span></code> dan <code class="docutils literal notranslate"><span class="pre">value</span></code> yang harus ditulis dalam <code class="docutils literal notranslate"><span class="pre">expression</span></code>. Sehingga, implementasi <em>dictionary comprehension</em> adalah sebagai berikut.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="alert alert-block alert-info docutils">
-<p><strong>Kuis:</strong> Misalkan diketahui harga produk pada setiap barang pada <code class="docutils literal notranslate"><span class="pre">manifesto</span></code> adalah seperti pada tabel berikut.</p>
+<div class="admonition-eksplorasi admonition">
+<p class="admonition-title">Eksplorasi</p>
+<p>Misalkan diketahui harga produk pada setiap barang pada <code class="docutils literal notranslate"><span class="pre">manifesto</span></code> adalah seperti pada tabel berikut.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>product</p></th>
@@ -798,13 +750,6 @@ True
 </tbody>
 </table>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -834,7 +779,7 @@ True
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="while-loop.html" title="previous page">Perulangan dengan While</a>
-    <a class='right-next' id="next-link" href="../modularity/index.html" title="next page">Konsep Modularitas</a>
+    <a class='right-next' id="next-link" href="../../references.html" title="next page">Referensi</a>
 
         </div>
         

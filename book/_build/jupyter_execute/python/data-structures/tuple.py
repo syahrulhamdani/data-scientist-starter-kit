@@ -11,7 +11,7 @@
 # * Mendaftar elemen-elemen yang dipisahkan dengan tanda koma, misal: `a, b, c` atau `(a, b, c, d)`
 # * Menggunakan fungsi bawaan `tuple()`
 # 
-# Mari kita coba satu persatu.\
+# Mari kita coba satu persatu.
 # 
 # ## Mendefinisikan Tuple dengan `,` dan `()`
 # 
@@ -86,8 +86,8 @@ print(str_bootcamp == bootcamp)
 # first_ceo, second_ceo = ceo
 # ```
 # 
-# ```{div} alert alert-block alert-info
-# **Kuis:** Dengan *unpacking*, definisikan variabel `longitude` dan `latitude` dari variabel `location` pada cell bawah ini
+# ```{admonition} Eksplorasi
+# Dengan *unpacking*, definisikan variabel `longitude` dan `latitude` dari variabel `location` pada cell bawah ini
 # ```
 
 # In[2]:
@@ -116,8 +116,8 @@ print(tuple())
 print(tuple("bitlabs"))
 
 
-# ````{div} alert alert-block alert-info
-# **Kuis:** Misal didefinisikan variabel di bawah ini.
+# ````{admonition} Eksplorasi
+# Misal didefinisikan variabel di bawah ini.
 # 
 # ```python
 # tuple_x = list(), str(), int(), float()

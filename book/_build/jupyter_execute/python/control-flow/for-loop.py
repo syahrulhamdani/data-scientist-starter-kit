@@ -154,20 +154,13 @@ for i in range(len(names)):
 # 
 # Dictionary mempunyai metode bawaan `items()` yang mengembalikan sebuah `list` atas pasangan-pasangan `key` dan `value` sebagai `tuple`. Sehingga, dengan perulangan `for`, kita bisa mengakses `key` dan `value` seperti pada contoh kasus pertama di atas.
 # 
-# ```{div} alert alert-block alert-info
+# ```{admonition} Eksplorasi
 # Misalkan kita punyai variabel `dict_manifesto` yang merupakan `manifesto` dalam bentuk dictionary dengan `key` adalah nama barang dan `value` adalah beratnya.
 # 1. Definisikan `dict_manifesto` sebagai representasi dictionary dari `manifesto`.
 # 2. Menggunakan `items()`, tampilkan pasangan `key` dan `value` dalam pola `key: value` menggunakan fungsi `print`.
 # ```
 
-# In[8]:
-
-
-# KETIK DI SINI
-
-
-# ````{div} alert alert-block alert-info
-# **Kuis:**
+# ````{admonition} Eksplorasi
 # Dengan masih menggunakan `dict_manifesto`, definisikan dulu `purchased_product` sebagai pemetaan antara nama produk dengan jumlah yang dibeli.
 # 
 # ```python
@@ -176,12 +169,6 @@ for i in range(len(names)):
 # 
 # Dari `purchased_product` di atas, kita ingin mengirimkan produk-produk di dalamnya ke para pembeli. Jika sekarang batas maksimal muatan dalam kargo adalah 1000, produk apa saja dalam `purchased_product` yang bisa dikirim, dengan berat masing-masing produk sesuai pada `dict_manifesto`.
 # ````
-
-# In[9]:
-
-
-# KETIK DI SINI
-
 
 # ## *List*, *Set*, dan *Dictionary Comprehension*
 # 
@@ -201,7 +188,7 @@ for i in range(len(names)):
 # 
 # Untuk menyelesaikan masalah pada contoh kasus di atas, kita bisa menggunakan perulangan `for` dan metode `append` pada `list`. Mari kita coba implementasi.
 
-# In[10]:
+# In[8]:
 
 
 list_product = []
@@ -223,7 +210,7 @@ print(list_product)
 # 
 # `expression` pada potongan kode di atasn adalah elemen yang akan mengisi `list` yang sedang didefinisikan. Sedangkan, `item` dan `iterable` adalah pernyataan `for` biasa. Sehingga, penerapan *list comprehension* untuk kasus pertama adalah seperti cell di bawah ini
 
-# In[11]:
+# In[9]:
 
 
 list_product_comprehension = [product for product, _ in manifesto]
@@ -239,17 +226,11 @@ print(list_product == list_product_comprehension)
 # 
 # Implementasi *set comprehension* juga serupa dengan *list comprehension*, yang membedakan hanyalah `set` menggunakan `{}`. Sehingga, bentuk *set comprehension* adalah `{expression for item in iterable}`.
 # 
-# ```{div} alert alert-block alert-info
+# ```{admonition} Eksplorasi
 # Untuk kasus nomor 2, silakan dicoba sendiri. Silakan definisikan `unique_names` sebagai `set`.
 # 
 # 2. Membuat variabel `unique_names` yang berisikan nama-nama dalam `names` yang baru dan tidak boleh ada duplikat
 # ```
-
-# In[12]:
-
-
-# KETIK DI SINI
-
 
 # Untuk *dictionary comprehension* juga memiliki implementasi yang serupa dengan *set comprehension* dalam hal kurung kurawal `{}`. Akan tetapi, yang membedakan adalah adanya `key` dan `value` yang harus ditulis dalam `expression`. Sehingga, implementasi *dictionary comprehension* adalah sebagai berikut.
 # 
@@ -257,8 +238,8 @@ print(list_product == list_product_comprehension)
 # {key: value for item in iterable}
 # ```
 # 
-# ````{div} alert alert-block alert-info
-# **Kuis:** Misalkan diketahui harga produk pada setiap barang pada `manifesto` adalah seperti pada tabel berikut.
+# ````{admonition} Eksplorasi
+# Misalkan diketahui harga produk pada setiap barang pada `manifesto` adalah seperti pada tabel berikut.
 # 
 # | product | price |
 # | --- | --- |
@@ -287,9 +268,3 @@ print(list_product == list_product_comprehension)
 # | toni | {"dog kennels": 2, "drugs": 2} |
 # | marcus | {"cheeses": 10} |
 # ````
-
-# In[13]:
-
-
-# KETIK DI SINI
-

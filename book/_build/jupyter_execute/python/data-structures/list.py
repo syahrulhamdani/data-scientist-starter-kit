@@ -69,18 +69,11 @@ print(list("bitlabs"))
 # Detail fungsi bawaan yang disediakan oleh Python dapat diakses dan kemudian dibaca di [dokumentasi](https://docs.python.org/3.8/library/functions.html). Khusus untuk metode dalam list, silakan baca [dokumentasi khusus list](https://docs.python.org/3.8/library/stdtypes.html#lists).
 # ```
 # 
-# ```{div} alert alert-block alert-info
-# **Kuis:**
+# ```{admonition} Eksplorasi
 # 1. Buatlah sebuah list `less_than_ten` yang berisi bilangan 0 sampai 9: `[0, 1, 2, 3, ..., 9]`.
 # 2. Urutkan list `less_than_ten` dimulai dari yang paling besar hingga paling kecil.
 # 3. Buat sebuah string dari elemen-elemen `less_than_ten` yang dipisahkan oleh kata `"bit"`.
 # ```
-
-# In[4]:
-
-
-# KETIK DI SINI
-
 
 # ## *Indexing* dan *Slicing*
 # 
@@ -102,7 +95,7 @@ print(list("bitlabs"))
 # 
 # Perhatikan contoh di bawah ini.
 
-# In[5]:
+# In[4]:
 
 
 names = ["John", "Andrew", "Sebastian", "Josh"]
@@ -124,11 +117,11 @@ print("names[-1]:", names[-1])
 # jika kita ingin mengakses nilai awal dan akhir suatu list, kita tidak perlu menyertakan indeks `0` dan indeks `n-1` karena kita bisa langsung tulis `names[:2]` dan `names[2:]` untuk mengakses 2 elemen pertama dan 2 elemen terakhir.
 # ```
 # 
-# ```{div} alert alert-block alert-info
-# **Kuis:** Dari list `random_dates` di bawah ini, coba tampilkan tanggal-tanggal dengan tahun genap dan juga gasal.
+# ```{admonition} Eksplorasi
+# Dari list `random_dates` di bawah ini, coba tampilkan tanggal-tanggal dengan tahun genap dan juga gasal.
 # ```
 
-# In[6]:
+# In[5]:
 
 
 random_dates = ['June 21, 2001', 'December 4, 2002', 'August 23, 2003',

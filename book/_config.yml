@@ -1,6 +1,7 @@
 # Book Settings
 title: "Basic Python Programming"
 author: "Syahrul Hamdani"
+logo: assets/images/bitlabs.png
 copyright: "Bitlabs Academy 2021"
 bibtex_reference_style: author_year  # or label, super, \supercite
 

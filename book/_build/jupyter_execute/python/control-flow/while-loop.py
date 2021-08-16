@@ -81,15 +81,9 @@ while idx < num_names:
     idx += 1
 
 
-# ```{div} alert alert-block alert-info
-# **Kuis:** Lakukan perulangan untuk `names` dengan menggunakan indeks negatif!
+# ```{admonition} Eksplorasi
+# Lakukan perulangan untuk `names` dengan menggunakan indeks negatif.
 # ```
-
-# In[4]:
-
-
-# KETIK DI SINI
-
 
 # ### Keluar dari `while` dengan `break`
 # 
@@ -105,7 +99,7 @@ while idx < num_names:
 #     idx += 1
 # ```
 
-# In[5]:
+# In[4]:
 
 
 idx = 0
@@ -125,13 +119,13 @@ while idx < len(names):
 # 
 # Dengan prinsip yang masih sama dengan `break`, misalkan kita ingin melanjutkan menampilkan nama dalam `names` meskipun ditemukan nama dengan jumlah karakter kurang dari 5. Kita bisa ganti `break` di atas dengan `continue` seperti di bawah ini.
 
-# In[6]:
+# In[5]:
 
 
 names.append("johnson")
 
 
-# In[7]:
+# In[6]:
 
 
 idx = 0
@@ -150,7 +144,7 @@ while idx < len(names):
 # Pada dasarnya, perulangan dengan `while` tergolong ke dalam *infinite loop* karena kode akan dieksekusi selama kondisi terpenuhi. Oleh karena itu, perulangan `while` memerlukan kondisi untuk berhenti dan logika kode supaya kondisi bisa jadi **tidak terpenuhi (`False`)** sedemikian sehingga perulangan bisa berhenti.
 # ```
 # 
-# ````{div} alert alert-block alert-info
+# ````{admonition} Eksplorasi
 # **Kuis:** Buat perulangan dengan `while` untuk membuat sebuah string *news* yang panjangnya **150 karakter** dari kumpulan judul berita dalam `headlines` yang setiap judul dipisahkan oleh **spasi**. Jika diperlukan, potong judul berita terakhir sedemikian hingga panjang keseluruhan `news` tepat **150 karakter**.
 # 
 # ```python
@@ -161,7 +155,7 @@ while idx < len(names):
 # ```
 # ````
 
-# In[8]:
+# In[7]:
 
 
 headlines = ["Pemprov DKI Perpanjang PPKM Mikro hingga 14 Juni",

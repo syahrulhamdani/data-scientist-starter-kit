@@ -149,9 +149,7 @@ else:
     print("let's go home and collect more money")
 
 
-# ```{div} alert alert-block -alert-info
-# **Kuis:**
-# 
+# ```{admonition} Eksplorasi
 # 1. Dengan menggunakan pernyataan kondisional, coba implementasikan beberapa kemungkinan untuk memenangkan doorprize seperti pada tabel di bawah.
 # 
 #     | points | prize |

@@ -238,8 +238,8 @@ print(simple_int, simple_float)
 # 
 # Kita bisa menggunakan *double qoutes* atau *single qoute* untuk menulis teks dalam satu baris yang sama dan menggunakan *triple double quotes* atau *triple single quotes* untuk lebih dari satu baris.
 # 
-# ````{div} alert alert-block alert-info
-# **Kuis:** Coba buat 3 variabel yang memuat masing-masing teks di bawah ini sesuai dengan nama variabel yang sudah ditentukan:
+# ````{admonition} Eksplorasi
+# Buat 3 variabel yang memuat masing-masing teks di bawah ini sesuai dengan nama variabel yang sudah ditentukan:
 # * nama variabel → `bootcamp`
 # ```
 # Selamat datang di Bitlabs!
@@ -259,27 +259,11 @@ print(simple_int, simple_float)
 # In[11]:
 
 
-bootcamp = # KETIK DI SINI
-novel = # KETIK DI SINI
-text = # KETIK DI SINI
+bootcamp = ...
+novel = ...
+text = ...
 
 print(bootcamp, novel, text)
-
-
-# ```{div} alert alert-block alert-info
-# **Kuis:** Perbaiki variabel `fix` di cell bawah ini supaya dapat ditampilkan.
-# ```
-
-# In[12]:
-
-
-fix = '
-"Apa mungkin, kita diam saja melihat 'ain diperlakukan seperti itu?", tanya usop.
-
-Ihsan pun diam, berpikir. 
-"
-
-print(fix)
 
 
 # ### Boolean
@@ -288,7 +272,7 @@ print(fix)
 # 
 # Nilai `True` dan `False` juga sering dikonversi ke dalam bentuk numerik yang memiliki nilai `1` dan `0` secara berturut-turut. Mari kita coba di cell bawah ini.
 
-# In[13]:
+# In[12]:
 
 
 print(5 < 3)
@@ -300,7 +284,7 @@ print("abjad" > "abjaf")
 print("1" >= "10")
 
 
-# In[14]:
+# In[13]:
 
 
 is_more = x > z
@@ -315,8 +299,8 @@ print(is_more, type(is_more))
 # 15 > 13 `or` 5 != 5. | True | `or` - Dievaluasi `True` jika salah satu pernyataan benar
 # `not` 15 < 13 | True | `not` - Kebalikan dari nilai boolean
 # 
-# ```{div} alert alert-block alert-info
-# **Kuis:** Lengkapilah tabel kebenaran di bawah ini jika kita definisikan `p = q = 1`.
+# ```{admonition} Eksplorasi
+# Lengkapilah tabel kebenaran di bawah ini jika kita definisikan `p = q = 1`.
 # 
 # | p | q | p `and` q | p `or` q |
 # | :-: | :-: | :---------: | :---------: |
@@ -326,18 +310,18 @@ print(is_more, type(is_more))
 # | `not` p | `not` q | `False` | `False` |
 # ```
 
-# In[15]:
+# In[14]:
 
 
 p = q = 1
 
-p_and_notq = # KETIK DI SINI
-notp_and_q = # KETIK DI SINI
-notp_and_notq = # KETIK DI SINI
+p_and_notq = ...
+notp_and_q = ...
+notp_and_notq = ...
 
-p_or_notq = # KETIK DI SINI
-notp_or_q = # KETIK DI SINI
-notp_or_notq = # KETIK DI SINI
+p_or_notq = ...
+notp_or_q = ...
+notp_or_notq = ...
 
 
 # Jika kita memasukkan nilai boolean ke dalam fungsi bawaan `int` atau `float`, maka nilai `True` akan berubah menjadi `1` dan `1.0` untuk integer dan float secara berturut-turut, dan sebaliknya untuk `False`.
