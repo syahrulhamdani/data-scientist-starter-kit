@@ -26,7 +26,7 @@ repository:
 # HTML-specific settings
 html:
   use_repository_button: true
-  use_issue_button: true
+  use_issues_button: true
   google_analytics_id: "G-VND61T1FVN"
 
 # Exeuction Settings
