@@ -20,8 +20,8 @@ parse:
 
 repository:
   url: https://github.com/syahrulhamdani/bitlabs-webinar-2021
-  branch: main
-  path_to_book: book
+  branch: book
+  path_to_book: .
 
 # Exeuction Settings
 execute:
