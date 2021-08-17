@@ -20,8 +20,13 @@ parse:
 
 repository:
   url: https://github.com/syahrulhamdani/bitlabs-webinar-2021
-  branch: book
-  path_to_book: .
+  branch: main
+  path_to_book: book
+
+# HTML-specific settings
+html:
+  use_repository_button: true
+  google_analytics_id: "G-VND61T1FVN"
 
 # Exeuction Settings
 execute:
@@ -29,7 +34,7 @@ execute:
   allow_errors: true
 
 launch_buttons:
-    # colab_url: "https://colab.research.google.com"
+  colab_url: "https://colab.research.google.com"
   thebe: true
 
 bibtex_bibfiles:

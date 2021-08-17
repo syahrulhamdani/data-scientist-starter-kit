@@ -228,6 +228,19 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -242,13 +255,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/syahrulhamdani/bitlabs-webinar-2021/book?urlpath=tree/./python/data-types-and-operators.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/syahrulhamdani/bitlabs-webinar-2021/main?urlpath=tree/book/python/data-types-and-operators.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/syahrulhamdani/bitlabs-webinar-2021/blob/main/book/python/data-types-and-operators.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         <button type="button" class="btn btn-secondary topbarbtn"
             onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
@@ -405,7 +423,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/gn/lh5142px2tb1x8mbqzsf3ckh0000gn/T/ipykernel_64341/40327442.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/gn/lh5142px2tb1x8mbqzsf3ckh0000gn/T/ipykernel_67377/40327442.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="n">my</span> <span class="n">population</span> <span class="o">=</span> <span class="mi">12091849</span>
        <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -421,7 +439,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/gn/lh5142px2tb1x8mbqzsf3ckh0000gn/T/ipykernel_64341/1046914688.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/gn/lh5142px2tb1x8mbqzsf3ckh0000gn/T/ipykernel_67377/1046914688.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
 <span class="g g-Whitespace">    </span><span class="mi">1</span><span class="n">_var</span> <span class="o">=</span> <span class="mi">100</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid decimal literal
@@ -823,7 +841,7 @@ False
         requestKernel: true,
         binderOptions: {
             repo: "syahrulhamdani/bitlabs-webinar-2021",
-            ref: "book",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -869,5 +887,12 @@ False
   <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VND61T1FVN"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-VND61T1FVN');
+                </script>
+
   </body>
 </html>
