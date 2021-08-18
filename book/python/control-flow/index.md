@@ -1,4 +1,4 @@
-# Arus Kontrol
+# Control Flow
 
 Setelah kita mengenal beberapa tipe data, operator, dan struktur data dasar yang disediakan oleh Python. Sekarang kita akan mulai mencoba membuat struktur kode yang menggunakan apa yang sudah dipelajari untuk membuat sebuah keputusan berdasarkan kondisi dan alur kerja tertentu.
 

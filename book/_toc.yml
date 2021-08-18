@@ -16,6 +16,16 @@ parts:
     - file: python/control-flow/conditional-statement
     - file: python/control-flow/while-loop
     - file: python/control-flow/for-loop
+- caption: Modularity in Python
+  chapters:
+  - file: python/modularity/index
+  - file: python/modularity/functions
+  - file: python/modularity/class
+  - file: python/modularity/modules
+- caption: Web Scraping using Python
+  chapters:
+  - file: web_scraping/index
+  - file: web_scraping/scraping
 - caption: Referensi
   chapters:
   - file: references.md
