@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Objek dan Kelas dalam Python &#8212; Basic Python Programming</title>
+    <title>Object and Class in Python &#8212; Basic Python Programming</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Modul dan Paket dalam Python" href="modules.html" />
-    <link rel="prev" title="Fungsi" href="functions.html" />
+    <link rel="next" title="Modules and Packages" href="modules.html" />
+    <link rel="prev" title="Functions" href="functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -71,6 +71,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+      <img src="../../_static/bitlabs.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
       
@@ -83,7 +85,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
-   Welcome
+   Selamat Datang!
   </a>
  </li>
 </ul>
@@ -92,15 +94,10 @@
   Basic Python Programming
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../why-python.html">
    Kenapa Harus Python?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-to-notebook.html">
-   Pengenalan Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -167,32 +164,32 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Modularity in Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="index.html">
    Konsep Modularitas
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="functions.html">
-     Fungsi
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Objek dan Kelas dalam Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="modules.html">
-     Modul dan Paket dalam Python
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Object and Class in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules and Packages
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -258,6 +255,22 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021/issues/new?title=Issue%20on%20page%20%2Fpython/modularity/class.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -279,6 +292,11 @@
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/syahrulhamdani/bitlabs-webinar-2021/blob/main/book/python/modularity/class.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         <button type="button" class="btn btn-secondary topbarbtn"
             onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
@@ -337,8 +355,8 @@
         
               <div>
                 
-  <div class="section" id="objek-dan-kelas-dalam-python">
-<h1>Objek dan Kelas dalam Python<a class="headerlink" href="#objek-dan-kelas-dalam-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="object-and-class-in-python">
+<h1>Object and Class in Python<a class="headerlink" href="#object-and-class-in-python" title="Permalink to this headline">¶</a></h1>
 <p>Semua yang ada di dalam Python adalah objek. Mulai dari angka (<code class="docutils literal notranslate"><span class="pre">int</span></code> sampai <code class="docutils literal notranslate"><span class="pre">complex</span></code>) sampai fungsi, semua adalah objek. Setiap ekspresi yang kita tulis, seperti penugasan pada variabel, dalam Python juga merupakan objek. Bahkan, kita sendiri juga bisa membuat objek secara manual dari awal, salah satunya menggunakan <code class="docutils literal notranslate"><span class="pre">class</span></code>.</p>
 <div class="section" id="apa-itu-objek">
 <h2>Apa Itu Objek?<a class="headerlink" href="#apa-itu-objek" title="Permalink to this headline">¶</a></h2>
@@ -396,8 +414,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Cat object at 0x10cb3cb50&gt; &lt;class &#39;__main__.Cat&#39;&gt;
-&lt;__main__.Cat object at 0x10cb3cb20&gt; &lt;class &#39;__main__.Cat&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Cat object at 0x1053d98e0&gt; &lt;class &#39;__main__.Cat&#39;&gt;
+&lt;__main__.Cat object at 0x1053d98b0&gt; &lt;class &#39;__main__.Cat&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -534,41 +552,6 @@ ben is a bengal cat. He sounds like meow....
 <p>Setiap kali kita ingin membuat metode objek dalam kelas, parameter pertama haruslah <code class="docutils literal notranslate"><span class="pre">self</span></code> yang merujuk pada objek yang dibuat. Pengaksesan atribut objek menggunakan sintaks <code class="docutils literal notranslate"><span class="pre">object.attr</span></code> setelah inisialisasi objek. Sedangkan, pengaksesan atribut atau metode objek dalam kelas, menggunakan <code class="docutils literal notranslate"><span class="pre">self.attr</span></code> atau <code class="docutils literal notranslate"><span class="pre">self.method</span></code> dengan <code class="docutils literal notranslate"><span class="pre">attr</span></code> dan <code class="docutils literal notranslate"><span class="pre">method</span></code> berturut-turut adalah nama atribut dan metode objeknya.</p>
 </div>
 <p>Sebagai contoh, mari kita perbarui kelas <code class="docutils literal notranslate"><span class="pre">Cat</span></code> dengan metode yang lebih kompleks seperti di bawah ini dan eksplor beberapa metode dan atributnya.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Define a cat.&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">food</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;persian&quot;</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s2">&quot;male&quot;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initiate a cat.</span>
-<span class="sd">        </span>
-<span class="sd">        Args:</span>
-<span class="sd">            name: cat&#39;s name</span>
-<span class="sd">            food: cat&#39;s food</span>
-<span class="sd">            kind: cat breed. By default is persian.</span>
-<span class="sd">            gender: male/female. By default is male.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">food</span> <span class="o">=</span> <span class="n">food</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">is_male</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span> <span class="k">else</span> <span class="kc">False</span>
-
-    <span class="k">def</span> <span class="nf">sound</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;meow..&quot;</span>
-
-    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Eat a given food.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">food</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;Yeay! it&#39;s </span><span class="si">{}</span><span class="s2">. Time to eat!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s2">&quot;Oh no, it&#39;s </span><span class="si">{}</span><span class="s2">. Only </span><span class="si">{}</span><span class="s2">, please.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">food</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">greet_person</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">person</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Greet a given person.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;Hi, </span><span class="si">{}</span><span class="s2">! nice to meet you.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">greet_cat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">another_cat</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Greet another cat.&quot;&quot;&quot;</span>
-        <span class="n">looks</span> <span class="o">=</span> <span class="s2">&quot;handsome&quot;</span> <span class="k">if</span> <span class="n">another_cat</span><span class="o">.</span><span class="n">is_male</span> <span class="k">else</span> <span class="s2">&quot;beautiful&quot;</span>
-        <span class="k">return</span> <span class="s2">&quot;Hi, </span><span class="si">{}</span><span class="s2">! You look </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">another_cat</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">looks</span><span class="p">)</span>
-</pre></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
@@ -684,22 +667,6 @@ Hi, Molly! You look handsome
 </div>
 </div>
 </div>
-<div class="alert alert-block alert-info docutils">
-<p><strong>Kuis:</strong> Buatlah sebuah kelas <code class="docutils literal notranslate"><span class="pre">ProductList</span></code> yang merepresentasikan daftar produk suatu toko yang menyimpan daftar nama produk yang masih/akan dijual dan daftar nama produk yang sudah terjual. Sebagai sebuah daftar produk suatu toko, beberapa perilaku yang bisa dilakukan atau dikenai pekerjaan adalah sebagai berikut:</p>
-<ul class="simple">
-<li><p>Menambah produk baru ke dalam produk yang akan dijual</p></li>
-<li><p>Memindahkan produk yang terjual dari daftar produk dijual ke dalam daftar produk terjual.</p></li>
-<li><p>Menampilkan daftar produk yang sedang dijual</p></li>
-<li><p>Menampilkan daftar produk yang sudah terjual</p></li>
-</ul>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -730,8 +697,8 @@ Hi, Molly! You look handsome
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">Fungsi</a>
-    <a class='right-next' id="next-link" href="modules.html" title="next page">Modul dan Paket dalam Python</a>
+    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">Functions</a>
+    <a class='right-next' id="next-link" href="modules.html" title="next page">Modules and Packages</a>
 
         </div>
         
@@ -756,5 +723,12 @@ Hi, Molly! You look handsome
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VND61T1FVN"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-VND61T1FVN');
+                </script>
+
   </body>
 </html>

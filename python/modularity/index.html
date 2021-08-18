@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Konsep Modularitas &#8212; Basic Python Programming</title>
+    <title>Modularity &#8212; Basic Python Programming</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fungsi" href="functions.html" />
+    <link rel="next" title="Functions" href="functions.html" />
     <link rel="prev" title="Perulangan dengan For" href="../control-flow/for-loop.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -71,6 +71,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+      <img src="../../_static/bitlabs.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
       
@@ -83,7 +85,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
-   Welcome
+   Selamat Datang!
   </a>
  </li>
 </ul>
@@ -92,15 +94,10 @@
   Basic Python Programming
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../why-python.html">
    Kenapa Harus Python?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-to-notebook.html">
-   Pengenalan Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -142,7 +139,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../control-flow/index.html">
-   Arus Kontrol
+   Control Flow
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -152,7 +149,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../control-flow/conditional-statement.html">
-     Pernyataan Kondisional
+     Conditional Statement
     </a>
    </li>
    <li class="toctree-l2">
@@ -167,32 +164,32 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Modularity in Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Konsep Modularitas
+   Modularity
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="functions.html">
-     Fungsi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="class.html">
-     Objek dan Kelas dalam Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="modules.html">
-     Modul dan Paket dalam Python
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class.html">
+   Object and Class in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modules.html">
+   Modules and Packages
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -258,6 +255,22 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021/issues/new?title=Issue%20on%20page%20%2Fpython/modularity/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -293,8 +306,8 @@
         
               <div>
                 
-  <div class="section" id="konsep-modularitas">
-<h1>Konsep Modularitas<a class="headerlink" href="#konsep-modularitas" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="modularity">
+<h1>Modularity<a class="headerlink" href="#modularity" title="Permalink to this headline">¶</a></h1>
 <p>Pemrograman modular merujuk pada <strong>proses memecah masalah pemrograman yang besar menjadi
 sub-masalah atau sub-tugas terpisah yang lebih kecil dan mudah untuk diatur</strong>. Dari beberapa
 bagian program tersebut dapat disusun sebuah program yang lebih besar, dapat digunakan kembali,
@@ -316,8 +329,6 @@ menghindari kerancuan pada bagian program yang lain.</p></li>
 <div class="section" id="modularitas-dalam-pemrograman">
 <h2>Modularitas dalam Pemrograman<a class="headerlink" href="#modularitas-dalam-pemrograman" title="Permalink to this headline">¶</a></h2>
 <p>Untuk mendukung modularitas, Python juga menyediakan <em>function</em>, <em>class</em>, dan <em>module</em> dari mulai bawaan dari Python atau yang kita buat sendiri. Pada bagian ini, kita akan belajar mengimplementasikan modularitas dalam Python, mulai dari membuat fungsi sendiri, mendefinisikan kelas, dan menaruh semuanya ke dalam sebuah modul untuk digunakan kembali sesuai kebutuhan.</p>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -347,7 +358,7 @@ menghindari kerancuan pada bagian program yang lain.</p></li>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../control-flow/for-loop.html" title="previous page">Perulangan dengan For</a>
-    <a class='right-next' id="next-link" href="functions.html" title="next page">Fungsi</a>
+    <a class='right-next' id="next-link" href="functions.html" title="next page">Functions</a>
 
         </div>
         
@@ -372,5 +383,12 @@ menghindari kerancuan pada bagian program yang lain.</p></li>
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VND61T1FVN"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-VND61T1FVN');
+                </script>
+
   </body>
 </html>

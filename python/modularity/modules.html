@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modul dan Paket dalam Python &#8212; Basic Python Programming</title>
+    <title>Modules and Packages &#8212; Basic Python Programming</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Referensi" href="../../references.html" />
-    <link rel="prev" title="Objek dan Kelas dalam Python" href="class.html" />
+    <link rel="prev" title="Object and Class in Python" href="class.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -73,6 +73,8 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+      <img src="../../_static/bitlabs.png" class="logo" alt="logo">
+      
       
       <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
       
@@ -85,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
-   Welcome
+   Selamat Datang!
   </a>
  </li>
 </ul>
@@ -94,15 +96,10 @@
   Basic Python Programming
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../why-python.html">
    Kenapa Harus Python?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro-to-notebook.html">
-   Pengenalan Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
@@ -169,32 +166,32 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Modularity in Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="index.html">
    Konsep Modularitas
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="functions.html">
-     Fungsi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="class.html">
-     Objek dan Kelas dalam Python
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Modul dan Paket dalam Python
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class.html">
+   Object and Class in Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Modules and Packages
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -260,6 +257,22 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021/issues/new?title=Issue%20on%20page%20%2Fpython/modularity/modules.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -281,6 +294,11 @@
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/syahrulhamdani/bitlabs-webinar-2021/blob/main/book/python/modularity/modules.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         <button type="button" class="btn btn-secondary topbarbtn"
             onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
@@ -339,8 +357,8 @@
         
               <div>
                 
-  <div class="section" id="modul-dan-paket-dalam-python">
-<h1>Modul dan Paket dalam Python<a class="headerlink" href="#modul-dan-paket-dalam-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="modules-and-packages">
+<h1>Modules and Packages<a class="headerlink" href="#modules-and-packages" title="Permalink to this headline">¶</a></h1>
 <p>Pada bagian ini, kita akan mulai membuat sebuah program Python secara menyeluruh dengan menerapkan semua yang sudah kita pelajari sebelumnya. Kita akan menulis modul buatan kita sendiri dan menggunakan modul bawaan dari Python, atau yang disebut dengan <strong>Python’s Standard Library</strong> dan modul-modul lainnya. Hal ini akan menjadi dasar melangkah ke <em>chapter</em> selanjutnya karena ke depannya kita akan menggunakan banyak sekali modul-modul buatan komunitas dan organisasi di luar sana.</p>
 <div class="section" id="apa-itu-modul-module">
 <h2>Apa Itu Modul (<em>Module</em>)?<a class="headerlink" href="#apa-itu-modul-module" title="Permalink to this headline">¶</a></h2>
@@ -361,10 +379,6 @@
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Modul utama <code class="docutils literal notranslate"><span class="pre">lunch.py</span></code></span><a class="headerlink" href="#lunch-py" title="Permalink to this image">¶</a></p>
 </div>
 <p>Jika kedua file tersebut berada dalam satu direktori yang sama, maka kita bisa menjalankan program utama <code class="docutils literal notranslate"><span class="pre">lunch.py</span></code> seperti di bawah ini.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Sangat disarankan untuk menjalankan program python (<code class="docutils literal notranslate"><span class="pre">.py</span></code>) melalui terminal.</p>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python lunch.py
@@ -384,7 +398,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to KFC for lunch
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to Toby&#39;s for lunch
 </pre></div>
 </div>
 </div>
@@ -396,7 +410,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to Burger King for lunch
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to KFC for lunch
 </pre></div>
 </div>
 </div>
@@ -444,62 +458,10 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Let&#39;s go to </span><span class="si">{}</span><span class="s2"> for lunch.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">place</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="alert alert-block alert-info docutils">
-<p><strong>Kuis:</strong> Impor pustaka standar Python <code class="docutils literal notranslate"><span class="pre">math</span></code> dan gunakan modul <code class="docutils literal notranslate"><span class="pre">math</span></code> untuk menghitung <span class="math notranslate nohighlight">\(e^3\)</span>.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition-tugas-baca admonition">
-<p class="admonition-title">Tugas Baca</p>
-<p>Lakukan riset dan eksplorasi tentang beberapa <a class="reference external" href="https://docs.python.org/3/library/">pustaka standar Python</a> berikut dan coba beberapa modul di dalamnya:</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">random</span></code></p></li>
-</ol>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># KETIK DI SINI</span>
-</pre></div>
-</div>
-</div>
+<p>Python juga menyediakan beberapa modul yang bisa langsung kita gunakan. Contohnya, modul <code class="docutils literal notranslate"><span class="pre">math</span></code> bisa membantu kita untuk menghitung operasi-operasi matematika yang lebih kompleks.</p>
+<div class="admonition-eksplorasi admonition">
+<p class="admonition-title">Eksplorasi</p>
+<p>Impor pustaka standar Python <code class="docutils literal notranslate"><span class="pre">math</span></code> dan gunakan modul <code class="docutils literal notranslate"><span class="pre">math</span></code> untuk menghitung <span class="math notranslate nohighlight">\(e^3\)</span>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -545,7 +507,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to Pizza Hut for lunch!
-Should we take out? No!
+Should we take out? Yes!
 </pre></div>
 </div>
 </div>
@@ -557,8 +519,8 @@ Should we take out? No!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to Pizza Hut for lunch!
-Should we take out? Sorry, what?
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to Toby&#39;s for lunch!
+Should we take out? Yes!
 </pre></div>
 </div>
 </div>
@@ -570,18 +532,11 @@ Should we take out? Sorry, what?
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to Lawless for lunch!
-Should we take out? No!
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Let&#39;s go to Burger King for lunch!
+Should we take out? Yes!
 </pre></div>
 </div>
 </div>
-</div>
-<div class="alert alert-block alert-info docutils">
-<p><strong>Kuis:</strong> Buatlah sebuah <em>package</em> <code class="docutils literal notranslate"><span class="pre">password</span></code> yang memiliki sebuah fungsi <code class="docutils literal notranslate"><span class="pre">generate_password</span></code> yang <strong>memilih 3 kata secara acak</strong> dari sebuah daftar kata <code class="docutils literal notranslate"><span class="pre">word_list</span></code> yang memuat kata-kata dalam file <code class="docutils literal notranslate"><span class="pre">words.txt</span></code> dan menggabungkan ketiga karakter tersebut menjadi satu string. Jika <em>package</em> berfungsi dengan benar, maka bisa digunakan untuk membangkitkan kata sandi seperit di bawah ini.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pw</span> <span class="o">=</span> <span class="n">password</span><span class="o">.</span><span class="n">generate_password</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Silakan unduh file <code class="docutils literal notranslate"><span class="pre">words.txt</span></code> <a class="reference external" href="https://storage.googleapis.com/bitlabs-dataset/words.txt">di sini</a>.</p>
 </div>
 </div>
 </div>
@@ -611,7 +566,7 @@ Should we take out? No!
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="class.html" title="previous page">Objek dan Kelas dalam Python</a>
+    <a class='left-prev' id="prev-link" href="class.html" title="previous page">Object and Class in Python</a>
     <a class='right-next' id="next-link" href="../../references.html" title="next page">Referensi</a>
 
         </div>
@@ -637,5 +592,12 @@ Should we take out? No!
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VND61T1FVN"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-VND61T1FVN');
+                </script>
+
   </body>
 </html>

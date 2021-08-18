@@ -1,4 +1,4 @@
-# Konsep Modularitas
+# Modularity
 
 Pemrograman modular merujuk pada **proses memecah masalah pemrograman yang besar menjadi
 sub-masalah atau sub-tugas terpisah yang lebih kecil dan mudah untuk diatur**. Dari beberapa
