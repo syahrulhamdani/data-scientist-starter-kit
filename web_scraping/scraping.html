@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scraping Data Science Job &#8212; Basic Python Programming</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Referensi" href="../references.html" />
+    <link rel="prev" title="Introduction to Web Scraping" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/bitlabs.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Selamat Datang!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Basic Python Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/why-python.html">
+   Kenapa Harus Python?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/data-types-and-operators.html">
+   Tipe Data dan Operator
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/data-structures/index.html">
+   Struktur Data Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/data-structures/list.html">
+     List
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/data-structures/tuple.html">
+     Tuple
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/data-structures/set.html">
+     Set
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/data-structures/dictionary.html">
+     Dictionary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/control-flow/index.html">
+   Control Flow
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/control-flow/conditional-statement.html">
+     Conditional Statement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/control-flow/while-loop.html">
+     Perulangan dengan While
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/control-flow/for-loop.html">
+     Perulangan dengan For
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Modularity in Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/modularity/index.html">
+   Modularity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/modularity/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/modularity/class.html">
+   Object and Class in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/modularity/modules.html">
+   Modules and Packages
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web Scraping using Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Introduction to Web Scraping
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Scraping Data Science Job
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Referensi
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   Referensi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/web_scraping/scraping.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021/issues/new?title=Issue%20on%20page%20%2Fweb_scraping/scraping.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/syahrulhamdani/bitlabs-webinar-2021/main?urlpath=tree/book/web_scraping/scraping.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/syahrulhamdani/bitlabs-webinar-2021/blob/main/book/web_scraping/scraping.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-spider">
+   Creating A Spider
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spider-class">
+     <em>
+      Spider Class
+     </em>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#konfigurasi-awal-spider">
+       1. Konfigurasi Awal
+       <em>
+        Spider
+       </em>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instruksi-gateaway">
+       2. Instruksi
+       <em>
+        Gateaway
+       </em>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instruksi-ekstraksi-informasi">
+       3. Instruksi Ekstraksi Informasi
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-the-crawler">
+     Run The Crawler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contoh-hasil">
+   Contoh Hasil
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="scraping-data-science-job">
+<h1>Scraping Data Science Job<a class="headerlink" href="#scraping-data-science-job" title="Permalink to this headline">¶</a></h1>
+<p>Untuk melakukan <em>web scraping</em>, kita gunakan library <code class="docutils literal notranslate"><span class="pre">Scrapy</span></code>. <strong>Scrapy</strong> adalah sebuah framework yang digunakan untuk <em>crawl</em> sebuah web dan mengekstrak data dari halaman web tersebut.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Perbedaan <em>framework</em> dan <em>library</em> terletak pada kontrol penggunaannya dalam sebuah program <span id="id1">[<a class="reference internal" href="../references.html#id27">Woz19</a>]</span>.</p>
+<ul class="simple">
+<li><p><strong>Framework</strong> meminta kita untuk menyediakan apa saja yang diperlukan untuk menggunakannya.</p></li>
+<li><p><strong>Library</strong> mengizinkan kita untuk menggunakannya di manapun dan kapanpun.</p></li>
+</ul>
+</div>
+<div class="section" id="creating-a-spider">
+<h2>Creating A Spider<a class="headerlink" href="#creating-a-spider" title="Permalink to this headline">¶</a></h2>
+<p>Scrapy menggunakan istilah “<em>spider</em>” yang merupakan <em>crawler</em> utama untuk “merayapi” halaman sebuah web. Untuk itu, kita perlu membuat <em>spider</em> yang didefinisikan dalam sebuah <em>class</em>. Secara umum, struktur kode yang akan kita buat adalah seperti berikut.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">scrapy.crawler</span> <span class="kn">import</span> <span class="n">CrawlerProcess</span>
+
+<span class="k">class</span> <span class="nc">DSJobCrawler</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ds_job_crawler&quot;</span>
+    <span class="c1"># instructions for spiders to follow</span>
+    <span class="o">...</span>
+
+
+<span class="c1"># initiate CrawlerProcess</span>
+<span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerProcess</span><span class="p">()</span>
+
+<span class="c1"># assign which spider to use</span>
+<span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">DSJobCrawler</span><span class="p">)</span>
+
+<span class="c1"># start crawling</span>
+<span class="n">crawler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="imports">
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<p>Pertama, kita lakukan impor framework <code class="docutils literal notranslate"><span class="pre">scrapy</span></code> dan class <code class="docutils literal notranslate"><span class="pre">CrawlerProcess</span></code> yang akan kita gunakan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">scrapy.crawler</span> <span class="kn">import</span> <span class="n">CrawlerProcess</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kita hanya memerlukan 2 <em>library</em> saja, yaitu <em>scrapy</em> dan <em>csv</em>. Sebelum kita impor, kita harus pastikan bahwa <code class="docutils literal notranslate"><span class="pre">scrapy</span></code> sudah terpasang atau belum. Jika belum, kita bisa <em>install</em> terlebih dahulu.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install Scrapy
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Untuk kemudahan, silakan akses notebook ini menggunakan Deepnote melalui link berikut: <a class="reference external" href="https://deepnote.com/project/Bitlabs-Webinar-Participants-dLC-FtPnTVCYE2M7i68cCw/%2Fscraping.ipynb">Web Scraping with Python</a></p>
+</div>
+<p>Supaya lebih sederhana, kita hanya akan mengumpulkan data lowongan pekerjaan <em>data scientist</em> dari <a class="reference external" href="https://id.indeed.com/">Indeed</a>. Data lowongan itu akan kita simpan dalam sebuah file berformat CSV, <code class="docutils literal notranslate"><span class="pre">data_scientist_job.csv</span></code>. Kita akan coba mengekstrak beberapa informasi berikut:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">job_title</span></code> → Judul pekerjaan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">job_link</span></code> → Tautan lowongan pekerjaan di Indeed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">company</span></code> → Nama perusahaan</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">company_rating</span></code> → Penilaian perusahaan berdasarkan pengguna Indeed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">company_reviews</span></code> → Jumlah ulasan perusahaan oleh pengguna Indeed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apply_link</span></code> → Tautan untuk melamar pekerjaan</p></li>
+</ul>
+<p>Oleh karena itu, terlebih dahulu kita buat file tersebut, <code class="docutils literal notranslate"><span class="pre">data_scientist_job.csv</span></code>, yang hanya berisi informasi-informasi di atas menggunakan kode di bawah ini.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data_scientist_job.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span>
+        <span class="n">out_file</span><span class="p">,</span>
+        <span class="n">fieldnames</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;job_title&quot;</span><span class="p">,</span> <span class="s2">&quot;job_link&quot;</span><span class="p">,</span> <span class="s2">&quot;company&quot;</span><span class="p">,</span> <span class="s2">&quot;company_rating&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;company_reviews&quot;</span><span class="p">,</span> <span class="s2">&quot;job_desc&quot;</span><span class="p">,</span> <span class="s2">&quot;apply_link&quot;</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="spider-class">
+<h3><em>Spider Class</em><a class="headerlink" href="#spider-class" title="Permalink to this headline">¶</a></h3>
+<p>Selanjutnya, kita buat <em>class</em> <code class="docutils literal notranslate"><span class="pre">DSJobCrawler</span></code> yang akan mengekstrak informasi yang disebutkan sebelumnya. Dalam mendefinisikan <em>class</em> tersebut, kita akan bagi ke dalam beberapa komponen:</p>
+<ol class="simple">
+<li><p>Konfigurasi awal <em>spider</em></p></li>
+<li><p>Instruksi <em>gateaway</em></p></li>
+<li><p>Instruksi ekstraksi informasi</p></li>
+</ol>
+<div class="section" id="konfigurasi-awal-spider">
+<h4>1. Konfigurasi Awal <em>Spider</em><a class="headerlink" href="#konfigurasi-awal-spider" title="Permalink to this headline">¶</a></h4>
+<p>Pertama, kita gunakan kode di bawah ini.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DSJobCrawler</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ds_job_crawler&quot;</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://id.indeed.com/lowongan-kerja-data-scientist-di-Indonesia&quot;</span><span class="p">]</span>
+    <span class="n">custom_settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;DOWNLOAD_DELAY&quot;</span><span class="p">:</span> <span class="mf">.5</span><span class="p">}</span>
+</pre></div>
+</div>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">DSJobCrawler(scrapy.Spider)</span></code> → <em>class</em> yang digunakan kita namai dengan <code class="docutils literal notranslate"><span class="pre">DSJobCrawler</span></code> yang mewarisi <em>class</em> <code class="docutils literal notranslate"><span class="pre">scrapy.Spider</span></code>. Pewarisan (<em>inheritance</em>) ini wajib hukumnya agar <em>scrapy</em> bisa berjalan.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Penjelasan lebih lanjut tentang <em>inheritance</em> bisa dieksplor di <a class="reference external" href="https://realpython.com/inheritance-composition-python/https://realpython.com/inheritance-composition-python/">artikel berikut</a>.</p>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> → nama <em>spider</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start_urls</span></code> → URL yang akan kita ekstrak informasinyaURL yang akan kita ekstrak informasinya</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_settings</span></code> → konfigurasi pada <em>spider</em> yang nilainya kita tentukan sendirikonfigurasi pada <em>spider</em> yang nilainya kita tentukan sendiri</p></li>
+</ul>
+</div>
+<div class="section" id="instruksi-gateaway">
+<h4>2. Instruksi <em>Gateaway</em><a class="headerlink" href="#instruksi-gateaway" title="Permalink to this headline">¶</a></h4>
+<p>Selanjutnya, kita akan mendefinisikan metode <code class="docutils literal notranslate"><span class="pre">parse</span></code> pada <em>class</em> <code class="docutils literal notranslate"><span class="pre">DSJobCrawler</span></code> yang pada kasus ini berfungsi sebagai sebuah <em>gateaway</em>. Maksud dari <em>gateaway</em> di sini adalah <code class="docutils literal notranslate"><span class="pre">parse</span></code> akan berfungsi sebagai gerbang masuk utama yang membantu mengarahkan tautan halaman yang akan diproses. Ini biasanya digunakan ketika kita tertarik untuk mengekstrak informasi dari <strong>beberapa halaman</strong>.</p>
+<p>Sebagai contoh, jika kita lihat contoh tampilan halaman pada Indeed berikut, setiap halaman mempunyai daftar lowongan pekerjaan. Kita tertarik untuk mengekstrak informasi dari setiap lowongan yang ada di halaman 1, 2, dan seterusnya.</p>
+<div class="figure align-default" id="indeed-example">
+<img alt="../_images/indeed-example.png" src="../_images/indeed-example.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Contoh tampilan laman Indeed</span><a class="headerlink" href="#indeed-example" title="Permalink to this image">¶</a></p>
+</div>
+<p>Kita akan menggunakan potongan kode berikut.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">...</span>
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="n">current_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;ul.pagination-list&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//*[contains(@aria-current, &#39;true&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;aria-label&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;current page: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">current_page</span><span class="p">)</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">next_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;ul.pagination-list&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//*[contains(@aria-label, &#39;</span><span class="si">{}</span><span class="s2">&#39;)]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">current_page</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t find next page. Done extracting&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">current_page</span><span class="p">:</span>
+                <span class="n">current_page</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">yield</span> <span class="n">response</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="n">next_page</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parse</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;dont_redirect&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+
+        <span class="k">for</span> <span class="n">job_link</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;a.tapItem::attr(href)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getall</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="n">response</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="n">job_link</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parse_detail</span><span class="p">)</span><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">...</span></code> adalah kode sebelum dan sesudah definisi metode tersebut.</p>
+</div>
+</div>
+<div class="section" id="instruksi-ekstraksi-informasi">
+<h4>3. Instruksi Ekstraksi Informasi<a class="headerlink" href="#instruksi-ekstraksi-informasi" title="Permalink to this headline">¶</a></h4>
+<p>Jika kita perhatikan pada metode <code class="docutils literal notranslate"><span class="pre">parse</span></code> di atas, ada bagian perulangan <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">job_link</span> <span class="pre">in</span> <span class="pre">response...</span></code> yang menggunakan <code class="docutils literal notranslate"><span class="pre">response.follow</span></code> untuk meneruskan <strong>setiap tautan detail lowongan</strong> ke fungsi <em>callback</em> <code class="docutils literal notranslate"><span class="pre">parse_detail</span></code>. Metode inilah yang akan digunakan untuk mengekstrak semua informasi yang ada pada halaman detail lowongan pekerjaan.</p>
+<p>Perlu diperhatikan juga bahwa setiap detail informasi pada lowongan pekerjaan pasti berbeda satu dengan yang lainnya, baik secara format penulisan dan kelengkapan informasi. Oleh karena itu, sangat wajar ketika informasi yang kita ekstrak tidak sempurna.</p>
+<div class="figure align-default" id="job-example">
+<img alt="../_images/job-ex.png" src="../_images/job-ex.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(kiri) lowongan pekerjaan 1. (kanan) lowongan pekerjaan 2.</span><a class="headerlink" href="#job-example" title="Permalink to this image">¶</a></p>
+</div>
+<p>Untuk itu, kita gunakan kode di bawah ini.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">...</span>
+    <span class="k">def</span> <span class="nf">parse_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="n">company_info</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//div[contains(@class, &#39;InlineCompanyRating&#39;)]&quot;</span><span class="p">)</span>
+        <span class="n">list_job_desc</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//div[contains(@class, &#39;jobDescriptionText&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;::text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getall</span><span class="p">()</span>
+        <span class="p">]</span>
+        <span class="n">job_detail</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;job_title&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;h1::text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+            <span class="s2">&quot;job_link&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+            <span class="s2">&quot;company&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//a/text()&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+            <span class="s2">&quot;company_rating&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//meta[contains(@itemprop, &#39;ratingValue&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;company_reviews&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//meta[contains(@itemprop, &#39;ratingCount&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;job_desc&quot;</span><span class="p">:</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list_job_desc</span><span class="p">),</span>
+            <span class="s2">&quot;apply_link&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//div[contains(@id, &#39;applyButtonLinkContainer&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;a::attr(href)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;glints_data_scientist.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">job_detail</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">job_detail</span><span class="p">)</span><span class="k">def</span> <span class="nf">parse_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="run-the-crawler">
+<h3>Run The Crawler<a class="headerlink" href="#run-the-crawler" title="Permalink to this headline">¶</a></h3>
+<p>Setelah semua komponen sudah siap dan dijadikan dalam satu <em>class</em>. Kita bisa langsung mengekstrak semua lowongan pekerjaan di Indeed menggunakan kode berikut ini.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerProcess</span><span class="p">()</span>
+<span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">DSJobCrawler</span><span class="p">)</span>
+<span class="n">crawler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="contoh-hasil">
+<h2>Contoh Hasil<a class="headerlink" href="#contoh-hasil" title="Permalink to this headline">¶</a></h2>
+<p>Jika proses ekstraksi kita berhasil, kita akan mendapatkan data lowongan pekerjaan beserta informasi yang kita ingingkan seperti ilustrasi di bawah ini.</p>
+<div class="figure align-default" id="result-example">
+<img alt="../_images/result-ex.png" src="../_images/result-ex.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Contoh hasil ekstraksi Scrapy</span><a class="headerlink" href="#result-example" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "syahrulhamdani/bitlabs-webinar-2021",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./web_scraping"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Introduction to Web Scraping</a>
+    <a class='right-next' id="next-link" href="../references.html" title="next page">Referensi</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Syahrul Hamdani<br/>
+        
+            &copy; Copyright Bitlabs Academy 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VND61T1FVN"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-VND61T1FVN');
+                </script>
+
+  </body>
+</html>

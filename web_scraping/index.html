@@ -5,54 +5,54 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Struktur Data Python &#8212; Basic Python Programming</title>
+    <title>Introduction to Web Scraping &#8212; Basic Python Programming</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="List" href="list.html" />
-    <link rel="prev" title="Tipe Data dan Operator" href="../data-types-and-operators.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scraping Data Science Job" href="scraping.html" />
+    <link rel="prev" title="Modules and Packages" href="../python/modularity/modules.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -69,22 +69,22 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../../_static/bitlabs.png" class="logo" alt="logo">
+      <img src="../_static/bitlabs.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Basic Python Programming</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../index.html">
+  <a class="reference internal" href="../index.html">
    Selamat Datang!
   </a>
  </li>
@@ -94,51 +94,51 @@
   Basic Python Programming
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../why-python.html">
+  <a class="reference internal" href="../python/why-python.html">
    Kenapa Harus Python?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../data-types-and-operators.html">
+  <a class="reference internal" href="../python/data-types-and-operators.html">
    Tipe Data dan Operator
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/data-structures/index.html">
    Struktur Data Python
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="list.html">
+    <a class="reference internal" href="../python/data-structures/list.html">
      List
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="tuple.html">
+    <a class="reference internal" href="../python/data-structures/tuple.html">
      Tuple
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="set.html">
+    <a class="reference internal" href="../python/data-structures/set.html">
      Set
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="dictionary.html">
+    <a class="reference internal" href="../python/data-structures/dictionary.html">
      Dictionary
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../control-flow/index.html">
+  <a class="reference internal" href="../python/control-flow/index.html">
    Control Flow
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -148,17 +148,17 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../control-flow/conditional-statement.html">
+    <a class="reference internal" href="../python/control-flow/conditional-statement.html">
      Conditional Statement
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../control-flow/while-loop.html">
+    <a class="reference internal" href="../python/control-flow/while-loop.html">
      Perulangan dengan While
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../control-flow/for-loop.html">
+    <a class="reference internal" href="../python/control-flow/for-loop.html">
      Perulangan dengan For
     </a>
    </li>
@@ -172,23 +172,40 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../modularity/index.html">
+  <a class="reference internal" href="../python/modularity/index.html">
    Modularity
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../modularity/functions.html">
+  <a class="reference internal" href="../python/modularity/functions.html">
    Functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../modularity/class.html">
+  <a class="reference internal" href="../python/modularity/class.html">
    Object and Class in Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../modularity/modules.html">
+  <a class="reference internal" href="../python/modularity/modules.html">
    Modules and Packages
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web Scraping using Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to Web Scraping
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scraping.html">
+   Scraping Data Science Job
   </a>
  </li>
 </ul>
@@ -199,7 +216,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../references.html">
+  <a class="reference internal" href="../references.html">
    Referensi
   </a>
  </li>
@@ -244,7 +261,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/python/data-structures/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/web_scraping/index.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -264,7 +281,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021/issues/new?title=Issue%20on%20page%20%2Fpython/data-structures/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/syahrulhamdani/bitlabs-webinar-2021/issues/new?title=Issue%20on%20page%20%2Fweb_scraping/index.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -285,6 +302,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pemahaman-bisnis">
+   Pemahaman Bisnis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#personal-project">
+   Personal Project
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -293,11 +328,31 @@
         
               <div>
                 
-  <div class="section" id="struktur-data-python">
-<h1>Struktur Data Python<a class="headerlink" href="#struktur-data-python" title="Permalink to this headline">¶</a></h1>
-<p>Setelah kita mengenal tipe data dasar Python, seperti integer, float, string, dan boolean, sekarang kita akan masuk ke tipe data yang merupakan gabungan objek-objek tersebut yang membentuk <strong>barisan</strong>. Barisan (<em>sequence</em>), dalam Python, terdiri dari 3 jenis tipe data, yaitu <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, dan <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
-<p>Pada bagian ini, kita akan mengenal <code class="docutils literal notranslate"><span class="pre">list</span></code> dan <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. Khusus untuk <code class="docutils literal notranslate"><span class="pre">range</span></code>, kita akan bahas di bagian <a class="reference internal" href="../control-flow/index.html"><span class="doc std std-doc">arus kontrol</span></a>.</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="introduction-to-web-scraping">
+<h1>Introduction to Web Scraping<a class="headerlink" href="#introduction-to-web-scraping" title="Permalink to this headline">¶</a></h1>
+<p>Web scraping adalah suatu teknik yang bertujuan untuk mengotomasi ekstraksi data dari berbagai sumber daring, mulai dari wikipedia, artikel, website, e-commerce, dan lainnya. Lalu, kenapa teknik ini penting untuk kita pelajari? Apa manfaat yang bisa diambil dengan <em>web scraping</em> di dunia kerja nanti?</p>
+<div class="section" id="pemahaman-bisnis">
+<h2>Pemahaman Bisnis<a class="headerlink" href="#pemahaman-bisnis" title="Permalink to this headline">¶</a></h2>
+<p>Dari segi bisnis, suatu perusahaan mungkin membutuhkan sebuah <em>scraper</em> untuk:</p>
+<ul class="simple">
+<li><p>Mengumpulkan data dari kompetitor, seperti harga untuk suatu produk yang mirip, untuk menyesuaikan harga yang masih bersaing</p></li>
+<li><p>Mengumpulkan ulasan, komentar, dari pengguna melalui media sosial untuk mengetahui opini terhadap perusahaan atau produk secara umum</p></li>
+<li><p>Dan lainnya</p></li>
+</ul>
+</div>
+<div class="section" id="personal-project">
+<h2>Personal Project<a class="headerlink" href="#personal-project" title="Permalink to this headline">¶</a></h2>
+<p>Jika kamu masih belum tergugah, coba bayangkan ini sebagai <em>personal project</em> yang bisa kamu pakai pamerkan. Selain itu, kamu bisa membuat <em>scraper</em> sebebas mungkin, misalkan:</p>
+<ul class="simple">
+<li><p>Mencari <em>meme</em> favorit kamu</p></li>
+<li><p>Mencari topik-topik berita yang sedang populer sekarang</p></li>
+<li><p>Mengumpulkan resep-resep masakan favorit kamu, sehingga saat memasak tidak perlu repot <em>browsing</em></p></li>
+<li><p>Dan lainnya</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Beberapa hal yang perlu diperhatikan dalam mengumpulkan data menggunakan <em>scraper</em> adalah <strong>apakah situs yang di-<em>scrape</em> mengizinkan <em>scraper</em> untuk mengakses secara bebas, beberapa halaman tertentu, atau bahkan tidak diizinkan sama sekali</strong>. Informasi ini bisa kita lihat dalam <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> dalam setiap situs.</p>
+</div>
 </div>
 </div>
 
@@ -314,7 +369,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./python/data-structures"
+            path: "./web_scraping"
         },
         predefinedOutput: true
     }
@@ -326,8 +381,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../data-types-and-operators.html" title="previous page">Tipe Data dan Operator</a>
-    <a class='right-next' id="next-link" href="list.html" title="next page">List</a>
+    <a class='left-prev' id="prev-link" href="../python/modularity/modules.html" title="previous page">Modules and Packages</a>
+    <a class='right-next' id="next-link" href="scraping.html" title="next page">Scraping Data Science Job</a>
 
         </div>
         
@@ -349,7 +404,7 @@
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
   
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VND61T1FVN"></script>
