@@ -42,7 +42,7 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
@@ -492,6 +492,10 @@
     <span class="n">custom_settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;DOWNLOAD_DELAY&quot;</span><span class="p">:</span> <span class="mf">.5</span><span class="p">}</span>
 </pre></div>
 </div>
+<div class="figure align-default" id="scrape-init">
+<img alt="../_images/scrape-init.png" src="../_images/scrape-init.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Pendefinisian <em>crawler</em></span><a class="headerlink" href="#scrape-init" title="Permalink to this image">¶</a></p>
+</div>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">DSJobCrawler(scrapy.Spider)</span></code> → <em>class</em> yang digunakan kita namai dengan <code class="docutils literal notranslate"><span class="pre">DSJobCrawler</span></code> yang mewarisi <em>class</em> <code class="docutils literal notranslate"><span class="pre">scrapy.Spider</span></code>. Pewarisan (<em>inheritance</em>) ini wajib hukumnya agar <em>scrapy</em> bisa berjalan.</p>
 <div class="admonition note">
@@ -510,16 +514,20 @@
 <p>Sebagai contoh, jika kita lihat contoh tampilan halaman pada Indeed berikut, setiap halaman mempunyai daftar lowongan pekerjaan. Kita tertarik untuk mengekstrak informasi dari setiap lowongan yang ada di halaman 1, 2, dan seterusnya.</p>
 <div class="figure align-default" id="indeed-example">
 <img alt="../_images/indeed-example.png" src="../_images/indeed-example.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Contoh tampilan laman Indeed</span><a class="headerlink" href="#indeed-example" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Contoh tampilan laman Indeed</span><a class="headerlink" href="#indeed-example" title="Permalink to this image">¶</a></p>
 </div>
 <p>Kita akan menggunakan potongan kode berikut.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">...</span>
     <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
-        <span class="n">current_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;ul.pagination-list&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//*[contains(@aria-current, &#39;true&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;aria-label&quot;</span><span class="p">)</span>
+        <span class="n">current_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;ul.pagination-list&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
+            <span class="s2">&quot;.//*[contains(@aria-current, &#39;true&#39;)]&quot;</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;aria-label&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;current page: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">current_page</span><span class="p">)</span>
         
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">next_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;ul.pagination-list&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//*[contains(@aria-label, &#39;</span><span class="si">{}</span><span class="s2">&#39;)]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">current_page</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+            <span class="n">next_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;ul.pagination-list&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
+                <span class="s2">&quot;.//*[contains(@aria-label, &#39;</span><span class="si">{}</span><span class="s2">&#39;)]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">current_page</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t find next page. Done extracting&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -528,13 +536,17 @@
                 <span class="k">yield</span> <span class="n">response</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="n">next_page</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parse</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;dont_redirect&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
 
         <span class="k">for</span> <span class="n">job_link</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;a.tapItem::attr(href)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getall</span><span class="p">():</span>
-            <span class="k">yield</span> <span class="n">response</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="n">job_link</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parse_detail</span><span class="p">)</span><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">response</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="n">job_link</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parse_detail</span><span class="p">)</span>
     <span class="o">...</span>
 </pre></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><code class="docutils literal notranslate"><span class="pre">...</span></code> adalah kode sebelum dan sesudah definisi metode tersebut.</p>
+</div>
+<div class="figure align-default" id="scrape-parse">
+<img alt="../_images/scrape-parse.png" src="../_images/scrape-parse.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Metode <code class="docutils literal notranslate"><span class="pre">parse</span></code> menerapkan fungsi rekursif untuk memroses tiap halaman dan mengarahkan ke metode <code class="docutils literal notranslate"><span class="pre">parse_detail</span></code> untuk memroses detil informasi lowongan</span><a class="headerlink" href="#scrape-parse" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="instruksi-ekstraksi-informasi">
@@ -543,7 +555,7 @@
 <p>Perlu diperhatikan juga bahwa setiap detail informasi pada lowongan pekerjaan pasti berbeda satu dengan yang lainnya, baik secara format penulisan dan kelengkapan informasi. Oleh karena itu, sangat wajar ketika informasi yang kita ekstrak tidak sempurna.</p>
 <div class="figure align-default" id="job-example">
 <img alt="../_images/job-ex.png" src="../_images/job-ex.png" />
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">(kiri) lowongan pekerjaan 1. (kanan) lowongan pekerjaan 2.</span><a class="headerlink" href="#job-example" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">(kiri) lowongan pekerjaan 1. (kanan) lowongan pekerjaan 2.</span><a class="headerlink" href="#job-example" title="Permalink to this image">¶</a></p>
 </div>
 <p>Untuk itu, kita gunakan kode di bawah ini.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="o">...</span>
@@ -557,16 +569,26 @@
             <span class="s2">&quot;job_title&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;h1::text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
             <span class="s2">&quot;job_link&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
             <span class="s2">&quot;company&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//a/text()&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
-            <span class="s2">&quot;company_rating&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//meta[contains(@itemprop, &#39;ratingValue&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
-            <span class="s2">&quot;company_reviews&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//meta[contains(@itemprop, &#39;ratingCount&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;company_rating&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
+                <span class="s2">&quot;.//meta[contains(@itemprop, &#39;ratingValue&#39;)]&quot;</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;company_reviews&quot;</span><span class="p">:</span> <span class="n">company_info</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
+                <span class="s2">&quot;.//meta[contains(@itemprop, &#39;ratingCount&#39;)]&quot;</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">attrib</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
             <span class="s2">&quot;job_desc&quot;</span><span class="p">:</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list_job_desc</span><span class="p">),</span>
-            <span class="s2">&quot;apply_link&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//div[contains(@id, &#39;applyButtonLinkContainer&#39;)]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;a::attr(href)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+            <span class="s2">&quot;apply_link&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
+                <span class="s2">&quot;//div[contains(@id, &#39;applyButtonLinkContainer&#39;)]&quot;</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s2">&quot;a::attr(href)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
         <span class="p">}</span>
 
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;glints_data_scientist.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
             <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">job_detail</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
             <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">job_detail</span><span class="p">)</span><span class="k">def</span> <span class="nf">parse_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
 </pre></div>
+</div>
+<div class="figure align-default" id="scrape-detail">
+<img alt="../_images/scrape-detail.png" src="../_images/scrape-detail.png" />
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Metode <code class="docutils literal notranslate"><span class="pre">scrape_detail</span></code> melakukan pra-pemrosesan tag HTML, menyimpan dalam sebuah <code class="docutils literal notranslate"><span class="pre">dictionary</span></code>, yang kemudian disimpan dalam file CSV</span><a class="headerlink" href="#scrape-detail" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -585,7 +607,7 @@
 <p>Jika proses ekstraksi kita berhasil, kita akan mendapatkan data lowongan pekerjaan beserta informasi yang kita ingingkan seperti ilustrasi di bawah ini.</p>
 <div class="figure align-default" id="result-example">
 <img alt="../_images/result-ex.png" src="../_images/result-ex.png" />
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Contoh hasil ekstraksi Scrapy</span><a class="headerlink" href="#result-example" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Contoh hasil ekstraksi Scrapy</span><a class="headerlink" href="#result-example" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
