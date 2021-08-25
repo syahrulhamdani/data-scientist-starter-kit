@@ -130,4 +130,5 @@ dmypy.json
 
 .DS_STORE
 *.pptx
+*.csv
 _build/
