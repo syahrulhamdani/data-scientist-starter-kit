@@ -10,7 +10,14 @@ Selama $\pm 3$ jam, kita akan belajar bersama-sama mengenai:
 * *Data structures* pada Python
 * *Control flow* pada Python
 
-Kita sudah sediakan *notebook* untuk kamu gunakan selama workshop sehingga kamu tidak perlu repot menyiapkan segala sesuatu sendiri. Kamu bisa akses notebook melalui link berikut: [notebook](https://deepnote.com/project/Bitlabs-Webinar-Participants-dLC-FtPnTVCYE2M7i68cCw/%2Fnotebook.ipynb).
+Kita sudah sediakan *notebook* untuk kamu gunakan selama workshop sehingga kamu tidak perlu repot menyiapkan segala sesuatu sendiri. Kamu bisa arahkan *cursor* ke gambar roket di kanan atas, lalu pilih antara *Binder*, *Colab*, atau *Live Code*. 
+* *Binder* akan membuka notebook menggunakna platform *mybinder*.
+* *Colab* akan membuka notebook menggunakan platform *Google Colab* (**recommended**).
+* *Live Code* akan menggunakan laman website untuk bisa menjalankan kode secara *live*.
+
+```{tip}
+Kita sarankan kamu menggunakan *Google Colab* supaya kamu bisa akses notebook yang sudah kamu buat sendiri.
+```
 
 Terakhir, kamu sangat dianjurkan untuk langsung bertanya jika mengalami kesulitan, isu, eror, atau ketidakpahaman terkait istilah-istilah yang mungkin nanti muncul.
 
