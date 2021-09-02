@@ -4,11 +4,13 @@ Halo, semuanya 👋
 
 Selamat datang di Workshop *Basic Python Programming* oleh Bitlabs Academy. Workshop ini bertujuan untuk memperkenalkan bahasa pemrograman Python sebagai *tool* dasar dalam Data Science. Jika kamu belum pernah menulis program sebelumnya, tetap tenang karena Python merupakan bahasa pemrograman yang sangat intuitif dan mudah untuk dipelajari. Jika kamu pernah menulis program menggunakan bahasa lainnya, maka ini akan menjadi pengalaman tambahan buatmu untuk menambah perspektif baru.
 
-Selama $\pm 3$ jam, kita akan belajar bersama-sama mengenai:
+Selama kurang lebih $3 \times 2.5$ jam, kita akan belajar bersama-sama mengenai:
 * Pengenalan Python dan kenapa kita menggunakan Python
 * Tipe data dan operator pada Python
 * *Data structures* pada Python
 * *Control flow* pada Python
+* Modularity dalam Python
+* Web Scraping menggunakan Scrapy
 
 Kita sudah sediakan *notebook* untuk kamu gunakan selama workshop sehingga kamu tidak perlu repot menyiapkan segala sesuatu sendiri. Kamu bisa arahkan *cursor* ke gambar roket di kanan atas, lalu pilih antara *Binder*, *Colab*, atau *Live Code*. 
 * *Binder* akan membuka notebook menggunakna platform *mybinder*.
