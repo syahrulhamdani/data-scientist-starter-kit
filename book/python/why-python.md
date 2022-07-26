@@ -42,7 +42,7 @@ Karena beberapa poin di atas lah, kita memutuskan untuk menggunakan Python. Kita
 
 ## Tren Penggunaan Python Sekarang dan Masa Depan
 
-Dengan semakin banyaknya yang memakai Python, mulai dari untuk data science, web development, aplikasi permainan, dan lainnya, Python tumbuh dan berkembang menjadi bahasa pemrograman yang sangat populer. Selain itu juga, banyak pengembang yang membuat modul atau pustakanya sendiri untuk bisa dipakai oleh orang lain, sehingga dukungan dari komunitas Python juga besar.
+Dengan semakin banyaknya yang memakai [Python](https://www.scaler.com/topics/python/applications-of-python/), mulai dari untuk data science, web development, aplikasi permainan, dan lainnya, Python tumbuh dan berkembang menjadi bahasa pemrograman yang sangat populer. Selain itu juga, banyak pengembang yang membuat modul atau pustakanya sendiri untuk bisa dipakai oleh orang lain, sehingga dukungan dari komunitas Python juga besar.
 
 Survei yang dilakukan oleh [stackoverflow pada tahun 2020](https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages) menempatkan Python pada posisi 4 bahasa pemrograman paling populer, yang sebelumnya pada hasil [survei 2018](https://insights.stackoverflow.com/survey/2018#technology) berada pada posisi 7. Python berhasil mengalahkan (melangkahi) bahasa pemrogrman yang lain seperti SQL, Java, dan Bash/Shell.
 
